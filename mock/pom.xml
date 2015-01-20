@@ -6,7 +6,7 @@
 		<artifactId>cwatch-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>cwatch-service-core</artifactId>
+	<artifactId>cwatch-service-mock</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -22,10 +22,6 @@
 			<artifactId>camel-servlet</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-camel</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
@@ -38,13 +34,25 @@
 			<artifactId>cwatch-stires-sender-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
-		<!-- 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<groupId>org.cwatch</groupId>
+			<artifactId>cwatch-vdm-test</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		 -->
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-core</artifactId>
+			<version>2.2.6.RELEASE</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
