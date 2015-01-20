@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.cwatch</groupId>
+		<artifactId>cwatch-boot</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>cwatch-service</artifactId>
+	<packaging>pom</packaging>
+
+	<scm>
+		<connection>scm:git:https://github.com/cwatch/cwatch-service.git</connection>
+		<developerConnection>scm:git:https://github.com/cwatch/cwatch-service.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>cwatch-repo-releases</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://cwatch.org/repo/releases</url>
+		</repository>
+		<repository>
+			<id>cwatch-repo-snapshots</id>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>https://cwatch.org/repo/libs-snapshot-local</url>
+		</repository>
+	</repositories>
+
+	<modules>
+		<module>core</module>
+	</modules>
+
+</project>
