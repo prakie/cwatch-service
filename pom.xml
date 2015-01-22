@@ -43,6 +43,7 @@
 
 	<modules>
 		<module>core</module>
+		<module>app</module>
 		<module>mock</module>
 	</modules>
 
