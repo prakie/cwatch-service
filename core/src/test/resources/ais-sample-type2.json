@@ -1,0 +1,45 @@
+{
+  "reportedVessel": {
+    "mmsi": 205565000,
+    "flagRegistryCode": "BE"
+  },
+  "positionReport": {
+    "aisMessageType": "2",
+    "rateOfTurn": 0.0,
+    "heading": 336,
+    "navigationalStatus": 0,
+    "epfdStatus": 5,
+    "raimFlag": false,
+    "timeL": 1422014500000,
+    "speedOverGround": 2.1,
+    "courseOverGround": 79.6,
+    "source": "A",
+    "longitude": 3.204155,
+    "latitude": 51.344186666666666
+  },
+  "vdmSentence": "\\c:1422014500*5C\\!BSVDM,1,1,,A,2342dB000EP\u003eberMHAt37:Q\u003e4D2e,0*36\n",
+  "originalNmeas": [
+    "!BSVDM,1,1,,A,2342dB000EP\u003eberMHAt37:Q\u003e4D2e,0*36"
+  ],
+  "commentBlock": {
+    "originalMessage": "\\c:1422014500\\",
+    "time": "1422014500",
+    "vdmInfoCb": {
+      "type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+      "properties": {
+        "dataOriginatorStr": "XDE",
+        "dataOriginator": {
+          "rcc": "XDE",
+          "countryCode": "XDE"
+        }
+      }
+    }
+  },
+  "cbRecipients": [],
+  "recipients": [],
+  "destinations": [],
+  "senderProviderAreas": [],
+  "persistence": false,
+  "voyageCalculation": false,
+  "proxied": false
+}

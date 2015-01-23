@@ -1,0 +1,56 @@
+{
+  "reportedVessel": {
+    "shipType": 0,
+    "length": 30,
+    "width": 8.0,
+    "draught": 3.0,
+    "imo": 8137213,
+    "mmsi": 211217760,
+    "name": "SENCKENBERG",
+    "callsign": "DDAW",
+    "flagRegistryCode": "DE"
+  },
+  "positionReport": {
+    "aisMessageType": "5",
+    "version": 0,
+    "destination": "WILHELMSHAVEN",
+    "eta": "2015-01-22 21:00:00",
+    "dataTerminalReady": false,
+    "dimRefPosition": {
+      "toBow": 18,
+      "toStern": 12,
+      "toStarboard": 5,
+      "toPort": 3
+    },
+    "navigationalStatus": 15,
+    "epfdType": 1,
+    "timeL": 1422014500000,
+    "source": "A"
+  },
+  "vdmSentence": "\\1G2:7442,c:1422014500*0B\\!ABVDM,2,1,0,A,539KeH01t:Ol@@5N221\u003cDp\u003cdDp8E8N22222222002@\u003c354KE07UjC21C,0*47\n\\2G2:7442*78\\!ABVDM,2,2,0,A,3Dj0EQC`8888880,2*35\n",
+  "originalNmeas": [
+    "!ABVDM,2,1,0,A,539KeH01t:Ol@@5N221\u003cDp\u003cdDp8E8N22222222002@\u003c354KE07UjC21C,0*47",
+    "!ABVDM,2,2,0,A,3Dj0EQC`8888880,2*35"
+  ],
+  "commentBlock": {
+    "originalMessage": "\\c:1422014500,2G2:7442\\",
+    "time": "1422014500",
+    "vdmInfoCb": {
+      "type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+      "properties": {
+        "dataOriginatorStr": "XDE",
+        "dataOriginator": {
+          "rcc": "XDE",
+          "countryCode": "XDE"
+        }
+      }
+    }
+  },
+  "cbRecipients": [],
+  "recipients": [],
+  "destinations": [],
+  "senderProviderAreas": [],
+  "persistence": false,
+  "voyageCalculation": false,
+  "proxied": false
+}

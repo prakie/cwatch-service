@@ -1,0 +1,44 @@
+{
+  "reportedVessel": {
+    "mmsi": 265611910,
+    "flagRegistryCode": "SE"
+  },
+  "positionReport": {
+    "aisMessageType": "18",
+    "classBUnitFlag": true,
+    "navigationalStatus": 15,
+    "epfdStatus": 3,
+    "raimFlag": false,
+    "timeL": 1422014500000,
+    "speedOverGround": 0.0,
+    "courseOverGround": 0.0,
+    "source": "A",
+    "longitude": 11.64526,
+    "latitude": 57.68145
+  },
+  "vdmSentence": "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+  "originalNmeas": [
+    "!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D"
+  ],
+  "commentBlock": {
+    "originalMessage": "\\c:1422014500\\",
+    "time": "1422014500",
+    "vdmInfoCb": {
+      "type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+      "properties": {
+        "dataOriginatorStr": "XDE",
+        "dataOriginator": {
+          "rcc": "XDE",
+          "countryCode": "XDE"
+        }
+      }
+    }
+  },
+  "cbRecipients": [],
+  "recipients": [],
+  "destinations": [],
+  "senderProviderAreas": [],
+  "persistence": false,
+  "voyageCalculation": false,
+  "proxied": false
+}

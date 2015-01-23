@@ -1,0 +1,49 @@
+{
+  "reportedVessel": {
+    "shipType": 30,
+    "length": 11,
+    "width": 5.0,
+    "mmsi": 257189800,
+    "name": "SCOTT",
+    "flagRegistryCode": "NO"
+  },
+  "positionReport": {
+    "aisMessageType": "19",
+    "dataTerminalReady": true,
+    "heading": 0,
+    "navigationalStatus": 15,
+    "epfdStatus": 0,
+    "raimFlag": false,
+    "timeL": 1422016706000,
+    "speedOverGround": 0.0,
+    "courseOverGround": 0.0,
+    "source": "A",
+    "longitude": 19.494355,
+    "latitude": 70.24154166666666
+  },
+  "vdmSentence": "\\c:1422016706*5A\\!BSVDM,1,1,,A,C3mAWb0008FCkjb359l000N0V6N``000000000000000?0\u003c411PP,0*3C\n",
+  "originalNmeas": [
+    "!BSVDM,1,1,,A,C3mAWb0008FCkjb359l000N0V6N``000000000000000?0\u003c411PP,0*3C"
+  ],
+  "commentBlock": {
+    "originalMessage": "\\c:1422016706\\",
+    "time": "1422016706",
+    "vdmInfoCb": {
+      "type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+      "properties": {
+        "dataOriginatorStr": "XDE",
+        "dataOriginator": {
+          "rcc": "XDE",
+          "countryCode": "XDE"
+        }
+      }
+    }
+  },
+  "cbRecipients": [],
+  "recipients": [],
+  "destinations": [],
+  "senderProviderAreas": [],
+  "persistence": false,
+  "voyageCalculation": false,
+  "proxied": false
+}
