@@ -38,7 +38,22 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		.unmarshal().gzip()
 		.unmarshal(aisgson)
 		.split(simple("${body.aisMessages}"))
+			.setHeader("aisMessageType", simple("${body.positionReport.aisMessageType}"))
+		.choice()
+			.when(header("aisMessageType").isEqualTo(5))
+				.to("direct:ais2cdfVoyage")
+			.when(header("aisMessageType").in(1,2,3,18.19))
+				.to("direct:ais2cdfPosition")
+			.otherwise()
+				.stop()
+		.endChoice()
 		.to("log:ais2cdf?showAll=false&showBody=false");
+		
+		from("direct:ais2cdfVoyage")
+		.to("log:ais2cdfVoyage?showAll=false&showBody=false");
+		
+		from("direct:ais2cdfPosition")
+		.to("log:ais2cdfPosition?showAll=false&showBody=false");
 	}
 	
 }

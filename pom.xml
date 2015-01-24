@@ -39,6 +39,16 @@
 			</snapshots>
 			<url>https://cwatch.org/repo/libs-snapshot-local</url>
 		</repository>
+		<repository>
+			<id>cwatch-priv</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://cwatch.org/repo/priv-release-local</url>
+		</repository>
 	</repositories>
 
 	<modules>
