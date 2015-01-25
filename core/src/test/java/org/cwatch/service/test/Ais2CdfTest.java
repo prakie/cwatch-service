@@ -59,6 +59,22 @@ public class Ais2CdfTest {
 					from("dataset:aisData")
 					.to("direct:ais2cdf")
 					;
+
+					from("direct:ais2cdfPositionOut")
+					.to("log:pos");
+					
+					from("direct:ais2cdfVoyageOut")
+					.to("log:voyage")
+					;
+					
+					from("direct:ais2cdfErrorOut")
+					.to("log:error")
+					;
+					
+					from("direct:ais2cdfInvalidOut")
+					.to("log:invalid")
+					;
+					
 				}
 			};
 		}
