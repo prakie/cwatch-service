@@ -61,18 +61,18 @@ public class Ais2CdfTest {
 					;
 
 					from("direct:ais2cdfPositionOut")
-					.to("log:pos");
+					.to("log:pos?showBody=false");
 					
 					from("direct:ais2cdfVoyageOut")
-					.to("log:voyage")
+					.to("log:voyage?showBody=false")
 					;
 					
 					from("direct:ais2cdfErrorOut")
-					.to("log:error")
+					.to("log:error?showBody=false")
 					;
 					
 					from("direct:ais2cdfInvalidOut")
-					.to("log:invalid")
+					.to("log:invalid?showBody=false")
 					;
 					
 				}

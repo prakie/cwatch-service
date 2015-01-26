@@ -34,6 +34,10 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-gson</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.cwatch</groupId>
@@ -55,11 +59,6 @@
 			<scope>test</scope> </dependency> <dependency> <groupId>org.jolokia</groupId> 
 			<artifactId>jolokia-core</artifactId> <scope>test</scope> </dependency> -->
 		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<scope>test</scope>
@@ -68,7 +67,6 @@
 			<groupId>emsa.ssn</groupId>
 			<artifactId>ssn-vdm-support</artifactId>
 			<version>1.0.2.1</version>
-			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
@@ -80,7 +78,6 @@
 			<groupId>emsa.ssn</groupId>
 			<artifactId>ssn-spm-domain</artifactId>
 			<version>1.0.2.1</version>
-			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
