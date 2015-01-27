@@ -4,9 +4,10 @@ import org.cwatch.split.CwatchSplitConfiguration;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
-@SpringBootApplication
+@SpringBootApplication(exclude={JmsAutoConfiguration.class})
 @Import({CwatchSplitConfiguration.class})
 public class CwatchServiceMain implements CommandLineRunner {
 	

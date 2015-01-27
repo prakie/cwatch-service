@@ -93,6 +93,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		;
 		
 		from("direct:ais2cdfPosition")
+		.id("ais2cdfPosition")
 		.errorHandler(noErrorHandler())
 		.bean(ais2cdf, "convertPosition")
 		.marshal(cdfJaxbDataFormat)
@@ -101,6 +102,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		
 		
 		from("direct:ais2cdfVoyage")
+		.id("ais2cdfVoyage")
 		.errorHandler(noErrorHandler())
 		.bean(ais2cdf, "convertVoyage")
 		.marshal(cdfJaxbDataFormat)
@@ -108,6 +110,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		;
 		
 		from("direct:ais2cdfOther")
+		.id("ais2cdfOther")
 		.errorHandler(noErrorHandler())
 		.to("log:ais2cdf.unknown?level=DEBUG");
 		

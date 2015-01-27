@@ -43,7 +43,6 @@
 			<groupId>org.cwatch</groupId>
 			<artifactId>cwatch-split-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.cwatch</groupId>

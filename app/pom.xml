@@ -16,6 +16,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cwatch</groupId>
+			<artifactId>cwatch-service-cdf</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cwatch</groupId>
 			<artifactId>cwatch-split-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -27,6 +32,11 @@
 			<groupId>org.jolokia</groupId>
 			<artifactId>jolokia-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-kahadb-store</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -39,6 +49,51 @@
 						<goals>
 							<goal>repackage</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.9</version>
+				<executions>
+					<execution>
+						<id>generate-jsw-scripts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>generate-daemons</goal>
+						</goals>
+						<configuration>
+							<platforms>
+								<platform>unix</platform>
+							</platforms>
+							<repositoryLayout>flat</repositoryLayout>
+							<generateRepository>false</generateRepository>
+							<configurationDirectory>config</configurationDirectory>
+							<copyConfigurationDirectory>true</copyConfigurationDirectory>
+							<includeConfigurationDirectoryInClasspath>false</includeConfigurationDirectoryInClasspath>
+							<daemons>
+								<daemon>
+									<id>starback</id>
+									<mainClass>org.cwatch.service.CwatchServiceMain</mainClass>
+									<commandLineArguments>
+										<commandLineArgument>start</commandLineArgument>
+									</commandLineArguments>
+									<platforms>
+										<platform>jsw</platform>
+									</platforms>
+									<generatorConfigurations>
+										<generatorConfiguration>
+											<generator>jsw</generator>
+											<includes>
+												<include>linux-x86-64</include>
+											</includes>
+										</generatorConfiguration>
+									</generatorConfigurations>
+								</daemon>
+							</daemons>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

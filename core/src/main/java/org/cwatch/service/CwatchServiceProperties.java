@@ -5,8 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "cwatch-service")
 public class CwatchServiceProperties {
 	
-	private String batchTopicName;
-	
 	private String cdfPositionTopicName = "cdf.pos";
 	
 	private String cdfVoyageTopicName = "cdf.voyage";
@@ -15,14 +13,12 @@ public class CwatchServiceProperties {
 	
 	private String cdfInvalidQueueName = "cdf.invalid";
 	
-	public String getBatchTopicName() {
-		return batchTopicName;
-	}
-
-	public void setBatchTopicName(String batchTopicName) {
-		this.batchTopicName = batchTopicName;
-	}
-
+	private String imdateNamingProviderUrl = "t3://twls55:7030";
+	
+	private String imdateUsername = "imdate";
+	
+	private String imdatePassword = "imdate123";
+	
 	public String getCdfPositionTopicName() {
 		return cdfPositionTopicName;
 	}
@@ -39,7 +35,7 @@ public class CwatchServiceProperties {
 		this.cdfVoyageTopicName = cdfVoyageTopicName;
 	}
 
-	public String getCdfErrorQueueName() {
+	public String getCdfErrorTopicName() {
 		return cdfErrorQueueName;
 	}
 
@@ -47,12 +43,36 @@ public class CwatchServiceProperties {
 		this.cdfErrorQueueName = cdfErrorQueueName;
 	}
 
-	public String getCdfInvalidQueueName() {
+	public String getCdfInvalidTopicName() {
 		return cdfInvalidQueueName;
 	}
 
 	public void setCdfInvalidQueueName(String cdfInvalidQueueName) {
 		this.cdfInvalidQueueName = cdfInvalidQueueName;
+	}
+
+	public String getImdateNamingProviderUrl() {
+		return imdateNamingProviderUrl;
+	}
+
+	public void setImdateNamingProviderUrl(String imdateNamingProviderUrl) {
+		this.imdateNamingProviderUrl = imdateNamingProviderUrl;
+	}
+
+	public String getImdateUsername() {
+		return imdateUsername;
+	}
+
+	public void setImdateUsername(String imdateUsername) {
+		this.imdateUsername = imdateUsername;
+	}
+
+	public String getImdatePassword() {
+		return imdatePassword;
+	}
+
+	public void setImdatePassword(String imdatePassword) {
+		this.imdatePassword = imdatePassword;
 	}
 
 	
