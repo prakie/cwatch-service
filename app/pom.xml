@@ -37,10 +37,17 @@
 			<artifactId>activemq-kahadb-store</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>tanukisoft</groupId>
+			<artifactId>wrapper</artifactId>
+			<version>3.2.3</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!--  
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -52,6 +59,9 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
+
+
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -59,44 +69,76 @@
 				<version>1.9</version>
 				<executions>
 					<execution>
-						<id>generate-jsw-scripts</id>
-						<phase>package</phase>
 						<goals>
 							<goal>generate-daemons</goal>
 						</goals>
-						<configuration>
-							<platforms>
-								<platform>unix</platform>
-							</platforms>
-							<repositoryLayout>flat</repositoryLayout>
-							<generateRepository>false</generateRepository>
-							<configurationDirectory>config</configurationDirectory>
-							<copyConfigurationDirectory>true</copyConfigurationDirectory>
-							<includeConfigurationDirectoryInClasspath>false</includeConfigurationDirectoryInClasspath>
-							<daemons>
-								<daemon>
-									<id>starback</id>
-									<mainClass>org.cwatch.service.CwatchServiceMain</mainClass>
-									<commandLineArguments>
-										<commandLineArgument>start</commandLineArgument>
-									</commandLineArguments>
-									<platforms>
-										<platform>jsw</platform>
-									</platforms>
-									<generatorConfigurations>
-										<generatorConfiguration>
-											<generator>jsw</generator>
-											<includes>
-												<include>linux-x86-64</include>
-											</includes>
-										</generatorConfiguration>
-									</generatorConfigurations>
-								</daemon>
-							</daemons>
-						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<platforms>
+						<platform>unix</platform>
+					</platforms>
+					<repositoryLayout>flat</repositoryLayout>
+					<generateRepository>true</generateRepository>
+					<configurationDirectory>config</configurationDirectory>
+					<copyConfigurationDirectory>true</copyConfigurationDirectory>
+					<includeConfigurationDirectoryInClasspath>false</includeConfigurationDirectoryInClasspath>
+					<logsDirectory>logs</logsDirectory>
+					<target>${project.build.directory}/dist</target>
+					<daemons>
+						<daemon>
+							<id>starback</id>
+							<!-- <wrapperMainClass>org.tanukisoftware.wrapper.WrapperJarApp</wrapperMainClass> 
+								<commandLineArguments> <commandLineArgument>lib/cwatch-service-app.jar</commandLineArgument> 
+								</commandLineArguments> -->
+							<mainClass>org.cwatch.service.CwatchServiceMain</mainClass>
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+										<include>linux-x86-64</include>
+									</includes>
+									<configuration>
+										<property>
+											<name>wrapper.logfile</name>
+											<value>logs/wrapper.log</value>
+										</property>
+										<property>
+											<name>wrapper.logfile.loglevel</name>
+											<value>STATUS</value>
+										</property>
+										<property>
+											<name>run.as.user.envvar</name>
+											<value>starback</value>
+										</property>
+									</configuration>
+								</generatorConfiguration>
+							</generatorConfigurations>
+						</daemon>
+					</daemons>
+				</configuration>
 			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/dist.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>
