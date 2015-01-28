@@ -68,7 +68,7 @@ public class Ais2CdfTest {
 					;
 					
 					from("direct:ais2cdfErrorOut")
-					.to("log:error?showBody=false")
+					.to("log:error?showAll=true")
 					;
 					
 					from("direct:ais2cdfInvalidOut")

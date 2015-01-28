@@ -58,28 +58,6 @@
 			<artifactId>guava</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>emsa.ssn</groupId>
-			<artifactId>ssn-vdm-support</artifactId>
-			<version>1.0.2.1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>emsa.ssn</groupId>
-			<artifactId>ssn-spm-domain</artifactId>
-			<version>1.0.2.1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 
 	</dependencies>
 

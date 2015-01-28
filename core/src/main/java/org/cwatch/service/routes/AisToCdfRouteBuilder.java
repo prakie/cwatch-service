@@ -8,6 +8,10 @@ import org.apache.camel.model.dataformat.JaxbDataFormat;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.apache.camel.support.ExpressionAdapter;
 import org.cwatch.service.CwatchServiceProperties;
+import org.cwatch.vdm.ais.AisMessage;
+import org.cwatch.vdm.ais.AisMessageContainer;
+import org.cwatch.vdm.ais.AisPositionReport;
+import org.cwatch.vdm.ais.gson.CbInfoCbGsonAdapter;
 import org.cwatch.vdm.cdf.AisMessageToCdfConversionException;
 import org.cwatch.vdm.cdf.AisMessageToCdfConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +20,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 
-import ssn.spm.domain.ais.AisMessage;
-import ssn.spm.domain.ais.AisMessageContainer;
-import ssn.spm.domain.ais.AisPositionReport;
 import ssn.spm.domain.vdm.commentblock.CbInfoCb;
-import ssn.vdm.support.util.CbInfoCbGsonAdapter;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

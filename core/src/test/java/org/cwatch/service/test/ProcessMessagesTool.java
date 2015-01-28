@@ -5,11 +5,12 @@ import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.Map.Entry;
 
-import ssn.spm.domain.ais.AisMessage;
-import ssn.spm.domain.ais.AisMessageContainer;
+import org.cwatch.vdm.ais.AisMessage;
+import org.cwatch.vdm.ais.AisMessageContainer;
+import org.cwatch.vdm.ais.gson.AisGsonConverter;
+import org.cwatch.vdm.ais.gson.CbInfoCbGsonAdapter;
+
 import ssn.spm.domain.vdm.commentblock.CbInfoCb;
-import ssn.vdm.support.util.AisGsonConverter;
-import ssn.vdm.support.util.CbInfoCbGsonAdapter;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.io.Files;
