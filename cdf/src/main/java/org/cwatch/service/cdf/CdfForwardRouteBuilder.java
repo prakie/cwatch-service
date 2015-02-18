@@ -28,40 +28,40 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	public void configure() throws Exception {
 		from("activemq:topic:"+configuration.getCdfPositionTopicName()+"?clientId=cwatchCdfPositionForward")
 		.id("cdfPositionForward")
-		.to("imdateJms:queue:imdate.l0.queue");
+		.to("cdfJms:" + configuration.getCdfWeblogicPositionQueue());
 		
 		from("activemq:topic:"+configuration.getCdfVoyageTopicName()+"?clientId=cwatchCdfVoyageForward")
 		.id("cdfVoyageForward")
-		.to("imdateJms:queue:imdate.ovr.queue");
+		.to("cdfJms:" + configuration.getCdfWeblogicVoyageQueue());
 	}
 	
 	@Bean
-	JndiTemplate imdateJndiTemplate(CwatchServiceProperties configuration) {
+	JndiTemplate cdfWeblogicJndiTemplate(CwatchServiceProperties configuration) {
 		Properties props = new Properties();
 		props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
-		props.setProperty(Context.PROVIDER_URL, configuration.getImdateNamingProviderUrl());
-		props.setProperty(Context.SECURITY_PRINCIPAL, configuration.getImdateUsername());
-		props.setProperty(Context.SECURITY_CREDENTIALS, configuration.getImdatePassword());
+		props.setProperty(Context.PROVIDER_URL, configuration.getCdfWeblogicNamingProviderUrl());
+		props.setProperty(Context.SECURITY_PRINCIPAL, configuration.getCdfWeblogicUsername());
+		props.setProperty(Context.SECURITY_CREDENTIALS, configuration.getCdfWeblogicPassword());
 		return new JndiTemplate(props);
 	}
 	
 	@Bean
-	ConnectionFactory imdateConnectionFactory(JndiTemplate imdateJndiTemplate) throws NamingException {
-		return imdateJndiTemplate.lookup("weblogic.jms.ConnectionFactory", ConnectionFactory.class);
+	ConnectionFactory cdfWeblogicConnectionFactory(JndiTemplate cdfWeblogicJndiTemplate) throws NamingException {
+		return cdfWeblogicJndiTemplate.lookup("weblogic.jms.ConnectionFactory", ConnectionFactory.class);
 	}
 
 	@Bean
-	JndiDestinationResolver imdateJmsDestinationResolver(JndiTemplate imdateJndiTemplate) {
+	JndiDestinationResolver cdfWeblogicJmsDestinationResolver(JndiTemplate cdfWeblogicJndiTemplate) {
 		JndiDestinationResolver resolver = new JndiDestinationResolver();
-		resolver.setJndiTemplate(imdateJndiTemplate);
+		resolver.setJndiTemplate(cdfWeblogicJndiTemplate);
 		return resolver;
 	}
 	
 	@Bean
-	JmsComponent imdateJms(ConnectionFactory imdateConnectionFactory, DestinationResolver imdateJmsDestinationResolver) {
+	JmsComponent cdfJms(ConnectionFactory cdfWeblogicConnectionFactory, DestinationResolver cdfWeblogicJmsDestinationResolver) {
 		JmsComponent jms = new JmsComponent();
-		jms.setConnectionFactory(imdateConnectionFactory);
-		jms.setDestinationResolver(imdateJmsDestinationResolver);
+		jms.setConnectionFactory(cdfWeblogicConnectionFactory);
+		jms.setDestinationResolver(cdfWeblogicJmsDestinationResolver);
 		return jms;
 	}
 

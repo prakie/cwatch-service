@@ -4,7 +4,7 @@ import org.apache.camel.component.servlet.CamelHttpTransportServlet;
 import org.apache.camel.model.ContextScanDefinition;
 import org.apache.camel.spring.CamelContextFactoryBean;
 import org.apache.camel.spring.SpringRouteBuilder;
-import org.cwatch.vdm.StiresSender;
+import org.cwatch.vdm.VdmHttpSender;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -58,9 +58,9 @@ public class CwatchMockRouteBuilder extends SpringRouteBuilder {
 	}
 	
 	@Bean
-	StiresSender stiresSender(@Value("${stires.baseUrl:http://localhost:8080}") String stiresBaseUrl) {
-		StiresSender stiresSender = new StiresSender();
-		stiresSender.setStiresBaseUrl(stiresBaseUrl);
+	VdmHttpSender vdmHttpSender(@Value("${vdmHttpTargetBaseUrl:http://localhost:8080}") String vdmHttpTargetBaseUrl) {
+		VdmHttpSender stiresSender = new VdmHttpSender();
+		stiresSender.setTargetBaseUrl(vdmHttpTargetBaseUrl);
 		return stiresSender;
 	}
 	

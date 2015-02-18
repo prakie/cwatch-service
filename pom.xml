@@ -54,7 +54,6 @@
 	<modules>
 		<module>core</module>
 		<module>cdf</module>
-		<module>app</module>
 		<module>mock</module>
 	</modules>
 

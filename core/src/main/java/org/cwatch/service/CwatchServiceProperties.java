@@ -13,11 +13,15 @@ public class CwatchServiceProperties {
 	
 	private String cdfInvalidQueueName = "cdf.invalid";
 	
-	private String imdateNamingProviderUrl = "t3://twls55:7030";
+	private String cdfWeblogicNamingProviderUrl;
 	
-	private String imdateUsername = "imdate";
+	private String cdfWeblogicUsername;
 	
-	private String imdatePassword = "imdate123";
+	private String cdfWeblogicPassword;
+	
+	private String cdfWeblogicPositionQueue;
+	
+	private String cdfWeblogicVoyageQueue;
 	
 	public String getCdfPositionTopicName() {
 		return cdfPositionTopicName;
@@ -51,31 +55,45 @@ public class CwatchServiceProperties {
 		this.cdfInvalidQueueName = cdfInvalidQueueName;
 	}
 
-	public String getImdateNamingProviderUrl() {
-		return imdateNamingProviderUrl;
+	public String getCdfWeblogicNamingProviderUrl() {
+		return cdfWeblogicNamingProviderUrl;
 	}
 
-	public void setImdateNamingProviderUrl(String imdateNamingProviderUrl) {
-		this.imdateNamingProviderUrl = imdateNamingProviderUrl;
+	public void setCdfWeblogicNamingProviderUrl(String cdfWeblogicNamingProviderUrl) {
+		this.cdfWeblogicNamingProviderUrl = cdfWeblogicNamingProviderUrl;
 	}
 
-	public String getImdateUsername() {
-		return imdateUsername;
+	public String getCdfWeblogicUsername() {
+		return cdfWeblogicUsername;
 	}
 
-	public void setImdateUsername(String imdateUsername) {
-		this.imdateUsername = imdateUsername;
+	public void setCdfWeblogicUsername(String cdfWeblogicUsername) {
+		this.cdfWeblogicUsername = cdfWeblogicUsername;
 	}
 
-	public String getImdatePassword() {
-		return imdatePassword;
+	public String getCdfWeblogicPassword() {
+		return cdfWeblogicPassword;
 	}
 
-	public void setImdatePassword(String imdatePassword) {
-		this.imdatePassword = imdatePassword;
+	public void setCdfWeblogicPassword(String cdfWeblogicPassword) {
+		this.cdfWeblogicPassword = cdfWeblogicPassword;
 	}
 
-	
-	
-	
+	public String getCdfWeblogicPositionQueue() {
+		return cdfWeblogicPositionQueue;
+	}
+
+	public void setCdfWeblogicPositionQueue(String cdfWeblogicPositionQueue) {
+		this.cdfWeblogicPositionQueue = cdfWeblogicPositionQueue;
+	}
+
+	public String getCdfWeblogicVoyageQueue() {
+		return cdfWeblogicVoyageQueue;
+	}
+
+	public void setCdfWeblogicVoyageQueue(String cdfWeblogicVoyageQueue) {
+		this.cdfWeblogicVoyageQueue = cdfWeblogicVoyageQueue;
+	}
+
+		
 }

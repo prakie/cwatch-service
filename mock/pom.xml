@@ -31,7 +31,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cwatch</groupId>
-			<artifactId>cwatch-stires-sender-core</artifactId>
+			<artifactId>cwatch-vdmhttp-sender-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
