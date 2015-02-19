@@ -1,9 +1,8 @@
 package org.cwatch.service.test;
 
 import org.apache.camel.Exchange;
-import org.apache.camel.Expression;
 import org.apache.camel.spring.SpringRouteBuilder;
-import org.apache.camel.util.StringHelper;
+import org.cwatch.boot.camel.MessageIdSuffixExpression;
 import org.cwatch.service.routes.AisToCdfRouteBuilder;
 import org.cwatch.split.CwatchSplitProperties;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,22 +19,6 @@ import org.springframework.context.annotation.Import;
 @EnableConfigurationProperties(CwatchSplitProperties.class)
 @Import({ListenTstarback1Configuration.class, AisToCdfRouteBuilder.class})
 public class ToCdfFileTstarback1Tool implements CommandLineRunner {
-
-	private final class MessageIdSuffixExpression implements Expression {
-		
-		public MessageIdSuffixExpression(String suffix) {
-			super();
-			this.suffix = suffix;
-		}
-
-		final private String suffix;
-
-		@SuppressWarnings("unchecked")
-		@Override
-		public <T> T evaluate(Exchange exchange, Class<T> type) {
-			return (T) (StringHelper.sanitize(exchange.getIn().getMessageId())+suffix);
-		}
-	}
 
 	@Autowired
 	CwatchSplitProperties cwatchSplitProperties;

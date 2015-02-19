@@ -57,6 +57,7 @@ public class Ais2CdfTest {
 			return new RouteBuilder() {
 				public void configure() {
 					from("dataset:aisData")
+					.id("testData")
 					.to("direct:ais2cdf")
 					;
 

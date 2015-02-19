@@ -55,6 +55,7 @@
 		<module>core</module>
 		<module>cdf</module>
 		<module>mock</module>
+		<module>testing</module>
 	</modules>
 
 </project>
