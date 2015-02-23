@@ -5,6 +5,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "cwatch-service")
 public class CwatchServiceProperties {
 	
+	private String vdmBatchTopicName;
+	
 	private String cdfPositionTopicName = "cdf.pos";
 	
 	private String cdfVoyageTopicName = "cdf.voyage";
@@ -93,6 +95,14 @@ public class CwatchServiceProperties {
 
 	public void setCdfWeblogicVoyageQueue(String cdfWeblogicVoyageQueue) {
 		this.cdfWeblogicVoyageQueue = cdfWeblogicVoyageQueue;
+	}
+
+	public String getVdmBatchTopicName() {
+		return vdmBatchTopicName;
+	}
+
+	public void setVdmBatchTopicName(String vdmBatchTopicName) {
+		this.vdmBatchTopicName = vdmBatchTopicName;
 	}
 
 		

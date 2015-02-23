@@ -2,18 +2,14 @@ package org.cwatch.service.routes;
 
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.cwatch.service.CwatchServiceProperties;
-import org.cwatch.split.CwatchSplitProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@EnableConfigurationProperties({CwatchServiceProperties.class, CwatchSplitProperties.class})
+@EnableConfigurationProperties({CwatchServiceProperties.class})
 public class CwatchRouteBuilder extends SpringRouteBuilder {
 
-	@Autowired
-	CwatchSplitProperties splitConfiguration;
-	
 	@Autowired
 	CwatchServiceProperties configuration;
 	
@@ -24,7 +20,7 @@ public class CwatchRouteBuilder extends SpringRouteBuilder {
 				.logExhaustedMessageHistory(false)
 		);
 		
-		from("activemq:topic:"+splitConfiguration.getBatchTopicName()+"?clientId=cwatchCdfBatch")
+		from("activemq:topic:"+configuration.getVdmBatchTopicName()+"?clientId=cwatchCdfBatch")
 		.id("cdfBatchReceiver")
 		.to("direct:ais2cdf");
 

@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.cwatch</groupId>
-		<artifactId>cwatch-service</artifactId>
+		<artifactId>cwatch-service-base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>cwatch-service-cdf</artifactId>
+	<artifactId>cwatch-service-testing</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -15,48 +15,22 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-spring</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jms</artifactId>
+			<groupId>org.cwatch</groupId>
+			<artifactId>cwatch-service-cdf</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-test-spring</artifactId>
-			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-camel</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>wlthint3client</artifactId>
-			<version>10.3.6.0</version>
-		</dependency>
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>cwatch-repo</id>
-			<name>cwatch-repo-releases</name>
-			<url>https://cwatch.org/repo/ext-release-local</url>
-		</repository>
-	</repositories>
 
 </project>

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.cwatch</groupId>
-		<artifactId>cwatch-service</artifactId>
+		<artifactId>cwatch-service-base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>cwatch-service-core</artifactId>
@@ -38,12 +38,6 @@
 		<dependency>
 			<groupId>org.cwatch</groupId>
 			<artifactId>cwatch-boot-camel</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cwatch</groupId>
-			<artifactId>cwatch-split-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cwatch</groupId>
