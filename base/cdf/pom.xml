@@ -56,6 +56,12 @@
 			<id>cwatch-repo</id>
 			<name>cwatch-repo-releases</name>
 			<url>https://cwatch.org/repo/ext-release-local</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 
