@@ -1,14 +1,22 @@
 package org.cwatch.service.test;
 
+import java.net.URL;
+
 import org.apache.camel.CamelContext;
+import org.apache.camel.EndpointInject;
+import org.apache.camel.Produce;
+import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.NotifyBuilder;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.dataset.DataSet;
 import org.apache.camel.component.dataset.DataSetSupport;
+import org.apache.camel.component.mock.MockEndpoint;
+import org.apache.camel.impl.DefaultCamelBeanPostProcessor;
 import org.apache.camel.model.ContextScanDefinition;
 import org.apache.camel.spring.CamelContextFactoryBean;
 import org.cwatch.service.routes.AisToCdfRouteBuilder;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,20 +33,82 @@ public class Ais2CdfTest {
 	@Autowired
 	CamelContext camelContext;
 	
+	@Produce(uri="direct:ais2cdf")
+	ProducerTemplate ais2cdf; 
+	
+	@EndpointInject(uri = "mock:ais2cdfErrorOut")
+	protected MockEndpoint ais2cdfErrorOut;
+	
 	@Test
-	public void test() {
-		Assert.assertTrue(new NotifyBuilder(camelContext).whenDone(5).create().matchesMockWaitTime());
+	public void testZippedValidSet() throws Exception {
+		NotifyBuilder notify = new NotifyBuilder(camelContext).whenCompleted(1).and().not().whenFailed(1).create();
+		ais2cdfErrorOut.expectedMessageCount(0);
+		
+		camelContext.addRoutes(new RouteBuilder() {
+			public void configure() {
+				from("dataset:aisData?preloadSize=5")
+				.id("testData")
+				.to("direct:ais2cdf")
+				;
+			}
+		});
+		
+		Assert.assertTrue(notify.matches());
+		ais2cdfErrorOut.assertIsSatisfied();
 	}
 
+	@Before
+	public void setup() throws Exception {
+		new DefaultCamelBeanPostProcessor(camelContext).postProcessBeforeInitialization(this, null);
+	}
+	
+	private static URL getResource(String res) {
+		return Ais2CdfTest.class.getResource(res);
+	}
+	
+	@Test
+	public void testInvalidContainer() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(1);
+		ais2cdf.sendBody(getResource("/vdmHttp-invalidContainer.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+
+	@Test
+	public void testValid() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(0);
+		ais2cdf.sendBody(getResource("/vdmHttp-valid.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+	
+	@Test
+	public void testNoMonitoring() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(0);
+		ais2cdf.sendBody(getResource("/vdmHttp-withoutMonitoringMessage.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+	
+	@Test
+	public void testOnlyMessages() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(0);
+		ais2cdf.sendBody(getResource("/vdmHttp-onlyMessages.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+	
 	@Configuration
 	@Import(AisToCdfRouteBuilder.class)
 	public static class ContextConfig  {
+		
 		@Bean
 		CamelContextFactoryBean camelContext() {
 			CamelContextFactoryBean factory = new CamelContextFactoryBean();
 			factory.setId("testContext");
 			factory.setContextScan(new ContextScanDefinition());
 			return factory;
+		}
+		
+		@Bean
+		DefaultCamelBeanPostProcessor camelProc() {
+			return new DefaultCamelBeanPostProcessor();
 		}
 		
 		@Bean
@@ -53,14 +123,9 @@ public class Ais2CdfTest {
 		}
 		
 		@Bean
-		public RouteBuilder route() {
+		public RouteBuilder logRouteBuilder() {
 			return new RouteBuilder() {
 				public void configure() {
-					from("dataset:aisData")
-					.id("testData")
-					.to("direct:ais2cdf")
-					;
-
 					from("direct:ais2cdfPositionOut")
 					.to("log:pos?showBody=false");
 					
@@ -70,6 +135,7 @@ public class Ais2CdfTest {
 					
 					from("direct:ais2cdfErrorOut")
 					.to("log:error?showAll=true")
+					.to("mock:ais2cdfErrorOut")
 					;
 					
 					from("direct:ais2cdfInvalidOut")

@@ -7,6 +7,7 @@ import org.apache.camel.component.gson.GsonDataFormat;
 import org.apache.camel.model.dataformat.JaxbDataFormat;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.apache.camel.support.ExpressionAdapter;
+import org.cwatch.boot.camel.MaybeGzipDataFormat;
 import org.cwatch.service.CwatchServiceProperties;
 import org.cwatch.vdm.ais.AisMessage;
 import org.cwatch.vdm.ais.AisMessageContainer;
@@ -24,6 +25,7 @@ import ssn.spm.domain.vdm.commentblock.CbInfoCb;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 
 @Component
 @Import(AisMessageToCdfConverter.class)
@@ -55,11 +57,12 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		
 		from("direct:ais2cdf")
 		.id("ais2cdf")
-		.unmarshal().gzip()
-		.setProperty(AIS_MESSAGE_CONTAINER_JSON, body())
-		.unmarshal("aisMessageContainerGsonDataFormat")
-		.setProperty("aisMessageId").simple("${body.messageId}")
-		.split(simple("${body.aisMessages}"))
+		.doTry()
+			.unmarshal("maybegzip")
+			.setProperty(AIS_MESSAGE_CONTAINER_JSON, body())
+			.unmarshal("aisMessageContainerGsonDataFormat")
+			.setProperty("aisMessageId").simple("${body.messageId}")
+			.split(simple("${body.aisMessages}"))
 			.doTry()
 				.setProperty(AIS_MESSAGE, body())
 				.setProperty("aisMessageType", new ExpressionAdapter() {
@@ -84,12 +87,16 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 						.to("direct:ais2cdfPosition")
 					.otherwise()
 						.to("direct:ais2cdfOther")
-				.endDoTry()
+			.endDoTry()
 			.doCatch(AisMessageToCdfConversionException.class)
 				.to("direct:ais2cdfInvalidOut")
 			.doCatch(Exception.class)
 				.to("direct:ais2cdfErrorOut")
 			.end()
+		.endDoTry()
+		.doCatch(Exception.class)
+			.to("direct:ais2cdfErrorOut")
+		.end()
 		;
 		
 		from("direct:ais2cdfPosition")
@@ -138,5 +145,5 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		Gson gson = gsonBilder.setPrettyPrinting().create();
 		return gson;
 	}
-	
+
 }

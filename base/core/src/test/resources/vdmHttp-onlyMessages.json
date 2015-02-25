@@ -1,0 +1,1531 @@
+{
+	"aisMessages": [
+		{
+			"reportedVessel": {
+				"mmsi": 257675800,
+				"flagRegistryCode": "NO"
+			},
+			"positionReport": {
+				"aisMessageType": "1",
+				"navigationalStatus": 0,
+				"epfdStatus": 6,
+				"raimFlag": true,
+				"timeL": 1422029843000,
+				"speedOverGround": 0.0,
+				"courseOverGround": 189.7,
+				"source": "A",
+				"longitude": 9.755718333333334,
+				"latitude": 63.85174666666666
+			},
+			"vdmSentence": "\\c:1422029843*58\\!BSVDM,1,1,,B,13mgB60P00Pdb7fTRDR7JOv`2009,0*18\n",
+			"originalNmeas": [
+				"!BSVDM,1,1,,B,13mgB60P00Pdb7fTRDR7JOv`2009,0*18"
+			],
+			"commentBlock": {
+				"originalMessage": "\\c:1422029843\\",
+				"time": "1422029843",
+				"vdmInfoCb": {
+					"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+					"properties": {
+						"dataOriginatorStr": "XDE",
+						"dataOriginator": {
+							"rcc": "XDE",
+							"countryCode": "XDE"
+						}
+					}
+				}
+			},
+			"cbRecipients": [],
+		"recipients": [],
+	"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 265699610,
+		"flagRegistryCode": "SE"
+	},
+	"positionReport": {
+		"aisMessageType": "18",
+		"classBUnitFlag": true,
+		"navigationalStatus": 15,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.1,
+		"courseOverGround": 244.9,
+		"source": "A",
+		"longitude": 11.488258333333333,
+		"latitude": 58.20908166666667
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!ABVDM,1,1,,B,B3uI16P00@\u003d9K\u003d`DrpVI7wb5kP06,0*15\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,,B,B3uI16P00@\u003d9K\u003d`DrpVI7wb5kP06,0*15"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 265523110,
+		"flagRegistryCode": "SE"
+	},
+	"positionReport": {
+		"aisMessageType": "18",
+		"classBUnitFlag": true,
+		"navigationalStatus": 15,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 261.2,
+		"source": "A",
+		"longitude": 12.744003333333334,
+		"latitude": 55.9928
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!AIVDM,1,1,,A,B3u\u003e?aP000\u003eUIQ80`B2SCwb5kP06,0*44\n",
+	"originalNmeas": [
+		"!AIVDM,1,1,,A,B3u\u003e?aP000\u003eUIQ80`B2SCwb5kP06,0*44"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 60,
+		"length": 86,
+		"width": 14.0,
+		"draught": 3.5,
+		"mmsi": 266026000,
+		"name": "VENUS",
+		"callsign": "SDEJ",
+		"flagRegistryCode": "SE"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "EKERO-SLAGSTA",
+		"eta": "2015-09-18 20:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 43,
+			"toStern": 43,
+			"toStarboard": 7,
+			"toPort": 7
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029841000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6901,c:1422029841*06\\!ABVDM,2,1,7,B,53udt4400001\u003c@Db221HDqE\u003e222222222222220t5Hc776ID08iBiDSsDk0A,0*34\n\\2G2:6901*73\\!ABVDM,2,2,7,B,lm0H8888880,2*52\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,7,B,53udt4400001\u003c@Db221HDqE\u003e222222222222220t5Hc776ID08iBiDSsDk0A,0*34", "!ABVDM,2,2,7,B,lm0H8888880,2*52"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841,2G2:6901\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 52,
+		"length": 34,
+		"width": 12.0,
+		"draught": 5.9,
+		"imo": 9462342,
+		"mmsi": 259086000,
+		"name": "BOA BALDER",
+		"callsign": "LDAF",
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "STAVANGER",
+		"eta": "2015-01-23 04:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 18,
+			"toStern": 16,
+			"toStarboard": 4,
+			"toPort": 8
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029843000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6902,c:1422029843*07\\!BSVDM,2,1,6,A,53o5Fd42@HTHh@4J2208t6084h@E:2222222220l2@@844KT0\u003elm0EPCQiD`,0*1F\n\\2G2:6902*70\\!BSVDM,2,2,6,A,88888888880,2*3B\n",
+	"originalNmeas": [
+		"!BSVDM,2,1,6,A,53o5Fd42@HTHh@4J2208t6084h@E:2222222220l2@@844KT0\u003elm0EPCQiD`,0*1F", "!BSVDM,2,2,6,A,88888888880,2*3B"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843,2G2:6902\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 563567000,
+		"flagRegistryCode": "SG"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 154,
+		"navigationalStatus": 5,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029843000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 21.3,
+		"source": "A",
+		"longitude": 5.100128333333333,
+		"latitude": 60.442928333333334
+	},
+	"vdmSentence": "\\c:1422029843*58\\!BSVDM,1,1,,A,38IMIV50000GF;JRUO7@mDl`4F`:,0*58\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,38IMIV50000GF;JRUO7@mDl`4F`:,0*58"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 257395500,
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"navigationalStatus": 0,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029843000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 329.8,
+		"source": "A",
+		"longitude": 30.030571666666667,
+		"latitude": 69.72718833333333
+	},
+	"vdmSentence": "\\c:1422029843*58\\!AIVDM,1,1,,A,13mN;;0P0029N1\u003eWqO6Lpgvb0\u003c0F,0*47\n",
+	"originalNmeas": [
+		"!AIVDM,1,1,,A,13mN;;0P0029N1\u003eWqO6Lpgvb0\u003c0F,0*47"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 257102540,
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "18",
+		"classBUnitFlag": true,
+		"navigationalStatus": 15,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029843000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 334.4,
+		"source": "A",
+		"longitude": 21.78775,
+		"latitude": 70.24908833333333
+	},
+	"vdmSentence": "\\c:1422029843*58\\!BSVDM,1,1,,A,B3m\u003cBk0000Hsj5:39ToA3wb5oP06,0*32\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,B3m\u003cBk0000Hsj5:39ToA3wb5oP06,0*32"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 0,
+		"length": 15,
+		"width": 4.0,
+		"mmsi": 257465800,
+		"name": "SUNNIVA",
+		"callsign": "LG7113",
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"eta": "2015-01-01 00:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 10,
+			"toStern": 5,
+			"toStarboard": 2,
+			"toPort": 2
+		},
+		"navigationalStatus": 15,
+		"timeL": 1422029843000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6903,c:1422029843*06\\!BSVDM,2,1,3,B,53mRMj400000hOO77\u003c1\u003dDppUH4000000000000001@522t@P000000000000,0*03\n\\2G2:6903*71\\!BSVDM,2,2,3,B,00000000000,2*3D\n",
+	"originalNmeas": [
+		"!BSVDM,2,1,3,B,53mRMj400000hOO77\u003c1\u003dDppUH4000000000000001@522t@P000000000000,0*03", "!BSVDM,2,2,3,B,00000000000,2*3D"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843,2G2:6903\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 257239900,
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": 0.0,
+		"heading": 123,
+		"navigationalStatus": 15,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029843000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 153.1,
+		"source": "A",
+		"longitude": 10.942465,
+		"latitude": 59.20498833333333
+	},
+	"vdmSentence": "\\c:1422029843*58\\!BSVDM,1,1,,A,13mDcG?000Pj5k\u003eQp9dEvkn`0\u003c08,0*4B\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,13mDcG?000Pj5k\u003eQp9dEvkn`0\u003c08,0*4B"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 257246420,
+		"flagRegistryCode": "NO"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 253,
+		"navigationalStatus": 1,
+		"epfdStatus": 6,
+		"raimFlag": true,
+		"timeL": 1422029843000,
+		"speedOverGround": 0.0,
+		"source": "A",
+		"longitude": 21.97904,
+		"latitude": 70.63075166666667
+	},
+	"vdmSentence": "\\c:1422029843*58\\!BSVDM,1,1,,A,33mE4m1000QTW;0`JTlv47rb2DVJ,0*0B\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,33mE4m1000QTW;0`JTlv47rb2DVJ,0*0B"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029843\\",
+		"time": "1422029843",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 244630113,
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": 0.0,
+		"heading": 332,
+		"navigationalStatus": 0,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.1,
+		"courseOverGround": 314.4,
+		"source": "A",
+		"longitude": 8.565985,
+		"latitude": 53.54732166666667
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!ABVDM,1,1,9,A,13aC2H@0010W\u003dT\u003eN`uRLB:Hd20Rs,0*3D\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,9,A,13aC2H@0010W\u003dT\u003eN`uRLB:Hd20Rs,0*3D"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 235098568,
+		"flagRegistryCode": "GB"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 313,
+		"navigationalStatus": 5,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 50.0,
+		"source": "A",
+		"longitude": 8.71758,
+		"latitude": 53.85898
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!ABVDM,1,1,4,A,33P\u003dAj5000PWqv`NlGw1u9jV4000,0*6D\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,4,A,33P\u003dAj5000PWqv`NlGw1u9jV4000,0*6D"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 205346000,
+		"flagRegistryCode": "BE"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": 0.0,
+		"heading": 136,
+		"navigationalStatus": 15,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 320.5,
+		"source": "A",
+		"longitude": 2.934301666666667,
+		"latitude": 51.233068333333335
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!BSVDM,1,1,,B,133mDl?0000\u003dKb:MD\u003dPLQD@b0614,0*45\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,B,133mDl?0000\u003dKb:MD\u003dPLQD@b0614,0*45"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 244670542,
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"navigationalStatus": 0,
+		"epfdStatus": 6,
+		"raimFlag": true,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 0.0,
+		"source": "A",
+		"longitude": 4.4216066666666665,
+		"latitude": 50.944175
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!BSVDM,1,1,,B,13aEPCPP00PD?I8M9`J@0?v`20S9,0*3C\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,B,13aEPCPP00PD?I8M9`J@0?v`20S9,0*3C"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 80,
+		"length": 110,
+		"width": 12.0,
+		"draught": 2.8,
+		"mmsi": 244670267,
+		"name": "ROXANNA",
+		"callsign": "PG8089",
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "DUISBURG",
+		"eta": "2015-01-03 20:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 100,
+			"toStern": 10,
+			"toStarboard": 5,
+			"toPort": 7
+		},
+		"navigationalStatus": 15,
+		"epfdType": 0,
+		"timeL": 1422029841000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6904,c:1422029841*03\\!BSVDM,2,1,1,B,53aEO\u003el000010OS3ST18uP4pp40000000000001@\u003cP:750Al0715BDhUDQh0,0*79\n\\2G2:6904*76\\!BSVDM,2,2,1,B,00000000000,2*3F\n",
+	"originalNmeas": [
+		"!BSVDM,2,1,1,B,53aEO\u003el000010OS3ST18uP4pp40000000000001@\u003cP:750Al0715BDhUDQh0,0*79", "!BSVDM,2,2,1,B,00000000000,2*3F"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841,2G2:6904\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 241279000
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 218,
+		"navigationalStatus": 1,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029841000,
+		"speedOverGround": 0.1,
+		"courseOverGround": 265.6,
+		"source": "A",
+		"longitude": 3.1748883333333335,
+		"latitude": 51.929136666666665
+	},
+	"vdmSentence": "\\c:1422029841*5A\\!BSVDM,1,1,,A,33V6P61001P\u003eR9:MedrbH6lb4Dsr,0*5B\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,33V6P61001P\u003eR9:MedrbH6lb4Dsr,0*5B"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 79,
+		"length": 80,
+		"width": 8.0,
+		"draught": 2.5,
+		"mmsi": 205291690,
+		"name": "BRUTUS",
+		"callsign": "OT2916",
+		"flagRegistryCode": "BE"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "HAUTRAGE",
+		"eta": "2015-03-06 12:30:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 70,
+			"toStern": 10,
+			"toStarboard": 4,
+			"toPort": 4
+		},
+		"navigationalStatus": 15,
+		"timeL": 1422029841000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6905,c:1422029841*02\\!BSVDM,2,1,7,A,533j0bT00000uC;W7H099EAE\u003c00000000000001?8h:44tk\u003cN6B0EE4PAi@0,0*4B\n\\2G2:6905*77\\!BSVDM,2,2,7,A,00000000000,2*3A\n",
+	"originalNmeas": [
+		"!BSVDM,2,1,7,A,533j0bT00000uC;W7H099EAE\u003c00000000000001?8h:44tk\u003cN6B0EE4PAi@0,0*4B", "!BSVDM,2,2,7,A,00000000000,2*3A"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841,2G2:6905\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 89,
+		"length": 129,
+		"width": 18.0,
+		"draught": 5.8,
+		"imo": 9451214,
+		"mmsi": 249453000,
+		"name": "DUMLUPINAR",
+		"callsign": "9HSK9",
+		"flagRegistryCode": "MT"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 0,
+		"destination": "RAFNES",
+		"eta": "2015-01-24 23:30:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 104,
+			"toStern": 25,
+			"toStarboard": 0,
+			"toPort": 18
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029841000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6906,c:1422029841*01\\!ABVDM,2,1,6,A,53eqIj02@\u003ddsTQ\u003cgV20ADliE0Tp5:2222222221I\u003d0IB04LGN\u003eTPASQD,0*25\n\\2G2:6906*74\\!ABVDM,2,2,6,A,p88888888888880,2*61\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,6,A,53eqIj02@\u003ddsTQ\u003cgV20ADliE0Tp5:2222222221I\u003d0IB04LGN\u003eTPASQD,0*25", "!ABVDM,2,2,6,A,p88888888888880,2*61"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841,2G2:6906\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 30,
+		"length": 38,
+		"width": 9.0,
+		"draught": 5.0,
+		"imo": 8205840,
+		"mmsi": 234879000,
+		"name": "HENDRIK BRANDS",
+		"callsign": "MXNW5",
+		"flagRegistryCode": "GB"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "EEMSHAVEN",
+		"eta": "2015-01-23 22:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 20,
+			"toStern": 18,
+			"toStarboard": 5,
+			"toPort": 4
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029841000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6907,c:1422029841*00\\!ABVDM,2,1,6,B,53Owp641u\u003dQ0mPqOF20PDpA8Tf0984pA\u003e222220N2PB454Kn0\u003cQACDj0,0*10\n\\2G2:6907*75\\!ABVDM,2,2,6,B,EQC`88888888880,2*1D\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,6,B,53Owp641u\u003dQ0mPqOF20PDpA8Tf0984pA\u003e222220N2PB454Kn0\u003cQACDj0,0*10", "!ABVDM,2,2,6,B,EQC`88888888880,2*1D"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029841,2G2:6907\\",
+		"time": "1422029841",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 261000700,
+		"flagRegistryCode": "PL"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"navigationalStatus": 15,
+		"epfdStatus": 6,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 8.8,
+		"courseOverGround": 179.9,
+		"source": "A",
+		"longitude": 17.579265,
+		"latitude": 54.93661
+	},
+	"vdmSentence": "\\c:1422029842*59\\!AIVDM,1,1,2,A,13pr\u003dw?P1HQ@N;\u003eOKmcW1wv`20Ro,0*20\n",
+	"originalNmeas": [
+		"!AIVDM,1,1,2,A,13pr\u003dw?P1HQ@N;\u003eOKmcW1wv`20Ro,0*20"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 256827000,
+		"flagRegistryCode": "MT"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": -0.7142446133345274,
+		"heading": 293,
+		"navigationalStatus": 0,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 10.4,
+		"courseOverGround": 292.8,
+		"source": "A",
+		"longitude": 11.648748333333334,
+		"latitude": 54.481213333333336
+	},
+	"vdmSentence": "\\c:1422029842*59\\!ABVDM,1,1,9,A,13lsNN0w1`0mDf2O;:F;L9:d6614,0*4F\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,9,A,13lsNN0w1`0mDf2O;:F;L9:d6614,0*4F"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 246430000,
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": 0.0,
+		"heading": 312,
+		"navigationalStatus": 0,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029842000,
+		"speedOverGround": 13.1,
+		"courseOverGround": 305.8,
+		"source": "A",
+		"longitude": 7.858428333333333,
+		"latitude": 54.12383833333333
+	},
+	"vdmSentence": "\\c:1422029842*59\\!ABVDM,1,1,9,B,13c0q\u003c0023PSvARNv4gstahb40Rh,0*55\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,9,B,13c0q\u003c0023PSvARNv4gstahb40Rh,0*55"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 229080000
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": -0.04464028833340796,
+		"heading": 110,
+		"navigationalStatus": 9,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029842000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 288.0,
+		"source": "A",
+		"longitude": 8.457333333333333,
+		"latitude": 55.452666666666666
+	},
+	"vdmSentence": "\\c:1422029842*59\\!ABVDM,1,1,7,B,13JMsh9wh0PVeg0Ofg\u003c;@3L`48\u003cr,0*71\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,7,B,13JMsh9wh0PVeg0Ofg\u003c;@3L`48\u003cr,0*71"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"length": 27,
+		"width": 6.0,
+		"draught": 2.4,
+		"imo": 9678628,
+		"mmsi": 235092103,
+		"name": "MCS PAMPERO",
+		"callsign": "2FKV2",
+		"flagRegistryCode": "GB"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 0,
+		"destination": "HELIGOLAND",
+		"eta": "2015-01-23 18:10:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 21,
+			"toStern": 6,
+			"toStarboard": 3,
+			"toPort": 3
+		},
+		"navigationalStatus": 15,
+		"epfdType": 0,
+		"timeL": 1422029842000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6908,c:1422029842*0C\\!ABVDM,2,1,6,B,53P\u003cpQh2CcjC8HeK:20l\u003d\u003e104m0E8v222222220i2`6330Kj:621C2Ak,0*11\n\\2G2:6908*7A\\!ABVDM,2,2,6,B,k0CQ88888888880,2*63\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,6,B,53P\u003cpQh2CcjC8HeK:20l\u003d\u003e104m0E8v222222220i2`6330Kj:621C2Ak,0*11", "!ABVDM,2,2,6,B,k0CQ88888888880,2*63"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842,2G2:6908\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 226000850,
+		"flagRegistryCode": "FR"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"navigationalStatus": 0,
+		"epfdStatus": 6,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 6.5,
+		"courseOverGround": 108.2,
+		"source": "A",
+		"longitude": 3.6739283333333335,
+		"latitude": 50.914291666666664
+	},
+	"vdmSentence": "\\c:1422029842*59\\!BSVDM,1,1,,A,13GQwlPP11P@lF:M8RGl\u003egvb2614,0*70\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,13GQwlPP11P@lF:M8RGl\u003egvb2614,0*70"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 33,
+		"length": 40,
+		"width": 10.0,
+		"draught": 1.8,
+		"imo": 950223,
+		"mmsi": 211448440,
+		"name": "STEUBENHOEFT",
+		"callsign": "DB2931",
+		"flagRegistryCode": "DE"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 0,
+		"destination": "CUXHAVEN",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 20,
+			"toStern": 20,
+			"toStarboard": 5,
+			"toPort": 5
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029842000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6909,c:1422029842*0D\\!ABVDM,2,1,7,A,539ajN00\u003eOtt@;;W?61\u003d@ED8DpPtDIB22222220Q2PD5540Ht4PmF20E,0*63\n\\2G2:6909*7B\\!ABVDM,2,2,7,A,QC`888888888880,2*62\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,7,A,539ajN00\u003eOtt@;;W?61\u003d@ED8DpPtDIB22222220Q2PD5540Ht4PmF20E,0*63", "!ABVDM,2,2,7,A,QC`888888888880,2*62"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842,2G2:6909\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 244750714,
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"navigationalStatus": 0,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 318.4,
+		"source": "A",
+		"longitude": 3.5923516666666666,
+		"latitude": 51.44768
+	},
+	"vdmSentence": "\\c:1422029842*59\\!BSVDM,1,1,,A,13aJINPP000@LLVML4P\u003cL?vd2614,0*0E\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,A,13aJINPP000@LLVML4P\u003cL?vd2614,0*0E"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 248908000,
+		"flagRegistryCode": "MT"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 353,
+		"navigationalStatus": 5,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 30.7,
+		"source": "A",
+		"longitude": 3.7677066666666668,
+		"latitude": 51.344795
+	},
+	"vdmSentence": "\\c:1422029842*59\\!BSVDM,1,1,,B,33eH8p50000A?lPMHCGA\u003cs2b6000,0*77\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,B,33eH8p50000A?lPMHCGA\u003cs2b6000,0*77"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 265528060,
+		"flagRegistryCode": "SE"
+	},
+	"positionReport": {
+		"aisMessageType": "1",
+		"rateOfTurn": 0.0,
+		"heading": 165,
+		"navigationalStatus": 0,
+		"epfdStatus": 4,
+		"raimFlag": true,
+		"timeL": 1422029842000,
+		"speedOverGround": 4.2,
+		"courseOverGround": 352.1,
+		"source": "A",
+		"longitude": 20.817226666666667,
+		"latitude": 63.83997
+	},
+	"vdmSentence": "\\c:1422029842*59\\!ABVDM,1,1,,A,13u\u003eRw000b1OBk0TQpsehE:d68\u003cS,0*05\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,,A,13u\u003eRw000b1OBk0TQpsehE:d68\u003cS,0*05"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 245058000,
+		"flagRegistryCode": "NL"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 339,
+		"navigationalStatus": 5,
+		"epfdStatus": 5,
+		"raimFlag": false,
+		"timeL": 1422029842000,
+		"speedOverGround": 0.0,
+		"courseOverGround": 343.0,
+		"source": "A",
+		"longitude": 8.739243333333333,
+		"latitude": 53.098528333333334
+	},
+	"vdmSentence": "\\c:1422029842*59\\!ABVDM,1,1,8,B,33ae9l5000P`0DlNHQcMIbV`4P00,0*6A\n",
+	"originalNmeas": [
+		"!ABVDM,1,1,8,B,33ae9l5000P`0DlNHQcMIbV`4P00,0*6A"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"shipType": 80,
+		"length": 86,
+		"width": 12.0,
+		"draught": 0.3,
+		"mmsi": 211590770,
+		"name": "DETTMER TANK 140",
+		"callsign": "DB7482",
+		"flagRegistryCode": "DE"
+	},
+	"positionReport": {
+		"aisMessageType": "5",
+		"version": 1,
+		"destination": "MAGDEBURG",
+		"eta": "2015-10-16 18:00:00",
+		"dataTerminalReady": false,
+		"dimRefPosition": {
+			"toBow": 84,
+			"toStern": 2,
+			"toStarboard": 6,
+			"toPort": 6
+		},
+		"navigationalStatus": 15,
+		"epfdType": 1,
+		"timeL": 1422029842000,
+		"source": "A"
+	},
+	"vdmSentence": "\\1G2:6910,c:1422029842*05\\!ABVDM,2,1,6,B,539jNLT00000@;OCS80@EA@lE:1@4pf37C00001@:P2666`B00k@Ai1@,0*48\n\\2G2:6910*73\\!ABVDM,2,2,6,B,UDQh00000000000,2*02\n",
+	"originalNmeas": [
+		"!ABVDM,2,1,6,B,539jNLT00000@;OCS80@EA@lE:1@4pf37C00001@:P2666`B00k@Ai1@,0*48", "!ABVDM,2,2,6,B,UDQh00000000000,2*02"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842,2G2:6910\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}, {
+	"reportedVessel": {
+		"mmsi": 219000192,
+		"flagRegistryCode": "DK"
+	},
+	"positionReport": {
+		"aisMessageType": "3",
+		"rateOfTurn": 0.0,
+		"heading": 101,
+		"navigationalStatus": 5,
+		"epfdStatus": 3,
+		"raimFlag": false,
+		"timeL": 1422029842000,
+		"speedOverGround": 0.1,
+		"courseOverGround": 171.7,
+		"source": "A",
+		"longitude": 10.536906666666667,
+		"latitude": 57.430596666666666
+	},
+	"vdmSentence": "\\c:1422029842*59\\!BSVDM,1,1,,B,33@neP50010h\u003ew0Po:uVeC:`0000,0*58\n",
+	"originalNmeas": [
+		"!BSVDM,1,1,,B,33@neP50010h\u003ew0Po:uVeC:`0000,0*58"
+	],
+	"commentBlock": {
+		"originalMessage": "\\c:1422029842\\",
+		"time": "1422029842",
+		"vdmInfoCb": {
+			"type": "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+			"properties": {
+				"dataOriginatorStr": "XDE",
+				"dataOriginator": {
+					"rcc": "XDE",
+					"countryCode": "XDE"
+				}
+			}
+		}
+	},
+	"cbRecipients": [],
+"recipients": [],
+"destinations": [],
+"senderProviderAreas": [],
+"persistence": false,
+"voyageCalculation": false,
+"proxied": false
+}
+],
+"messageId": "NPRTESTDEAREA2_1:064aedc4-be71-4f4f-ad60-08b65f3aa6e0",
+"proxyName": "NPRTESTDEAREA2_1",
+"receivedAt": 0
+}
