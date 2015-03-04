@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cwatch</groupId>
 		<artifactId>cwatch-boot-base</artifactId>
-		<version>0.0.6</version>
+		<version>0.0.8</version>
 		<relativePath>../cwatch-boot/base</relativePath>
 	</parent>
 
@@ -14,7 +14,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<cwatch-vdm.version>0.0.1</cwatch-vdm.version>
+		<cwatch-vdm.version>0.0.2</cwatch-vdm.version>
 		<cwatch-vdmhttp-sender.version>0.0.1</cwatch-vdmhttp-sender.version>
 	</properties>
 
