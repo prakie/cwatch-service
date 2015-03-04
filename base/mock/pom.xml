@@ -32,12 +32,10 @@
 		<dependency>
 			<groupId>org.cwatch</groupId>
 			<artifactId>cwatch-vdmhttp-sender-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cwatch</groupId>
 			<artifactId>cwatch-vdm-test</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>

@@ -16,6 +16,7 @@
 
 	<properties>
 		<cwatch-vdm.version>0.0.1</cwatch-vdm.version>
+		<cwatch-vdmhttp-sender.version>0.0.1</cwatch-vdmhttp-sender.version>
 	</properties>
 
 	<scm>
@@ -113,7 +114,17 @@
 				<artifactId>cwatch-vdm-cdf</artifactId>
 				<version>${cwatch-vdm.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.cwatch</groupId>
+				<artifactId>cwatch-vdm-test</artifactId>
+				<version>${cwatch-vdm.version}</version>
+			</dependency>
 
+			<dependency>
+				<groupId>org.cwatch</groupId>
+				<artifactId>cwatch-vdmhttp-sender-core</artifactId>
+				<version>${cwatch-vdmhttp-sender.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
