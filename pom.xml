@@ -6,13 +6,17 @@
 	<parent>
 		<groupId>org.cwatch</groupId>
 		<artifactId>cwatch-boot-base</artifactId>
-		<version>0.0.5</version>
+		<version>0.0.6</version>
 		<relativePath>../cwatch-boot/base</relativePath>
 	</parent>
 
 	<version>0.0.1-SNAPSHOT</version>
 	<artifactId>cwatch-service</artifactId>
 	<packaging>pom</packaging>
+
+	<properties>
+		<cwatch-vdm.version>0.0.1</cwatch-vdm.version>
+	</properties>
 
 	<scm>
 		<connection>scm:git:https://github.com/cwatch/cwatch-service.git</connection>
@@ -103,9 +107,16 @@
 				<classifier>project</classifier>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.cwatch</groupId>
+				<artifactId>cwatch-vdm-cdf</artifactId>
+				<version>${cwatch-vdm.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<modules>
 		<module>base</module>
 	</modules>
