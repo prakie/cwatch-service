@@ -9,7 +9,7 @@
 		<relativePath>../cwatch-boot/base</relativePath>
 	</parent>
 
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<artifactId>cwatch-service</artifactId>
 	<packaging>pom</packaging>
 
@@ -21,7 +21,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/cwatch/cwatch-service.git</connection>
 		<developerConnection>scm:git:https://github.com/cwatch/cwatch-service.git</developerConnection>
-		<tag>cwatch-service-0.0.2</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<repositories>
@@ -88,12 +88,12 @@
 			<dependency>
 				<groupId>org.cwatch</groupId>
 				<artifactId>cwatch-service-core</artifactId>
-				<version>0.0.2</version>
+				<version>0.0.3-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>org.cwatch</groupId>
 				<artifactId>cwatch-service-cdf</artifactId>
-				<version>0.0.2</version>
+				<version>0.0.3-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>org.cwatch</groupId>
@@ -105,7 +105,7 @@
 				<artifactId>cwatch-service</artifactId>
 				<type>tar.gz</type>
 				<classifier>project</classifier>
-				<version>0.0.2</version>
+				<version>0.0.3-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
