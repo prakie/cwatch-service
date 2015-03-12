@@ -7,7 +7,6 @@ import org.apache.camel.component.gson.GsonDataFormat;
 import org.apache.camel.model.dataformat.JaxbDataFormat;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.apache.camel.support.ExpressionAdapter;
-import org.cwatch.boot.camel.MaybeGzipDataFormat;
 import org.cwatch.service.CwatchServiceProperties;
 import org.cwatch.vdm.ais.AisMessage;
 import org.cwatch.vdm.ais.AisMessageContainer;
@@ -25,7 +24,6 @@ import ssn.spm.domain.vdm.commentblock.CbInfoCb;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonSyntaxException;
 
 @Component
 @Import(AisMessageToCdfConverter.class)
@@ -45,7 +43,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		
-		String contextPathBase = eu.europa.emsa.schemas.cdf.v_0_5_8_1.ObjectFactory.class.getPackage().getName();
+		String contextPathBase = eu.europa.emsa.schemas.cdf.v_1_0.ObjectFactory.class.getPackage().getName();
 		JaxbDataFormat cdfJaxbDataFormat = new JaxbDataFormat();
 		cdfJaxbDataFormat.setContextPath(
 				contextPathBase  

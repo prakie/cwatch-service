@@ -14,7 +14,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<cwatch-vdm.version>0.0.2</cwatch-vdm.version>
+		<cwatch-vdm.version>0.0.3-SNAPSHOT</cwatch-vdm.version>
 		<cwatch-vdmhttp-sender.version>0.0.1</cwatch-vdmhttp-sender.version>
 	</properties>
 
