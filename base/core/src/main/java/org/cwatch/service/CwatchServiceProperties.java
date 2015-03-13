@@ -15,6 +15,8 @@ public class CwatchServiceProperties {
 	
 	private String cdfInvalidQueueName = "cdf.invalid";
 	
+	private String cdfWeblogicConnectionFactory = "weblogic.jms.ConnectionFactory";
+	
 	private String cdfWeblogicNamingProviderUrl;
 	
 	private String cdfWeblogicUsername;
@@ -103,6 +105,14 @@ public class CwatchServiceProperties {
 
 	public void setVdmBatchTopicName(String vdmBatchTopicName) {
 		this.vdmBatchTopicName = vdmBatchTopicName;
+	}
+
+	public String getCdfWeblogicConnectionFactory() {
+		return cdfWeblogicConnectionFactory;
+	}
+
+	public void setCdfWeblogicConnectionFactory(String cdfWeblogicConnectionFactory) {
+		this.cdfWeblogicConnectionFactory = cdfWeblogicConnectionFactory;
 	}
 
 		

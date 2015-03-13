@@ -139,7 +139,7 @@ public class Ais2CdfTest {
 					;
 					
 					from("direct:ais2cdfInvalidOut")
-					.to("log:invalid?showBody=false")
+					.to("log:invalid?showAll=true")
 					;
 					
 				}
