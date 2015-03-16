@@ -1,6 +1,9 @@
 package org.cwatch.service.cdf;
 
+import java.util.Properties;
+
 import javax.jms.ConnectionFactory;
+import javax.naming.Context;
 import javax.naming.NamingException;
 
 import org.apache.camel.component.jms.JmsComponent;
@@ -33,6 +36,11 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 		.to("cdfJms:" + configuration.getCdfWeblogicVoyageQueue());
 	}
 
+	@Bean
+	JndiTemplate cdfWeblogicJndiTemplate(CwatchServiceProperties configuration) {
+		return new JndiTemplate(configuration.getCdfInitialContext().createProperties());
+	}
+	
 	@Bean
 	ConnectionFactory cdfWeblogicConnectionFactory(@Qualifier("cdfWeblogicJndiTemplate") JndiTemplate cdfWeblogicJndiTemplate, CwatchServiceProperties configuration) throws NamingException {
 		return cdfWeblogicJndiTemplate.lookup(configuration.getCdfWeblogicConnectionFactory(), ConnectionFactory.class);

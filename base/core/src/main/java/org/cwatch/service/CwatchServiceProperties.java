@@ -1,5 +1,6 @@
 package org.cwatch.service;
 
+import org.cwatch.env.InitialContextProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "cwatch-service")
@@ -15,13 +16,15 @@ public class CwatchServiceProperties {
 	
 	private String cdfInvalidQueueName = "cdf.invalid";
 	
+	private InitialContextProperties cdfInitialContext = new InitialContextProperties(
+			"weblogic.jndi.WLInitialContextFactory",
+			"t3://twls69.emsa.local:7011",
+			"weblogic",
+			"weblogic1"
+	);
+
+	
 	private String cdfWeblogicConnectionFactory = "weblogic.jms.ConnectionFactory";
-	
-	private String cdfWeblogicNamingProviderUrl;
-	
-	private String cdfWeblogicUsername;
-	
-	private String cdfWeblogicPassword;
 	
 	private String cdfWeblogicPositionQueue;
 	
@@ -59,30 +62,6 @@ public class CwatchServiceProperties {
 		this.cdfInvalidQueueName = cdfInvalidQueueName;
 	}
 
-	public String getCdfWeblogicNamingProviderUrl() {
-		return cdfWeblogicNamingProviderUrl;
-	}
-
-	public void setCdfWeblogicNamingProviderUrl(String cdfWeblogicNamingProviderUrl) {
-		this.cdfWeblogicNamingProviderUrl = cdfWeblogicNamingProviderUrl;
-	}
-
-	public String getCdfWeblogicUsername() {
-		return cdfWeblogicUsername;
-	}
-
-	public void setCdfWeblogicUsername(String cdfWeblogicUsername) {
-		this.cdfWeblogicUsername = cdfWeblogicUsername;
-	}
-
-	public String getCdfWeblogicPassword() {
-		return cdfWeblogicPassword;
-	}
-
-	public void setCdfWeblogicPassword(String cdfWeblogicPassword) {
-		this.cdfWeblogicPassword = cdfWeblogicPassword;
-	}
-
 	public String getCdfWeblogicPositionQueue() {
 		return cdfWeblogicPositionQueue;
 	}
@@ -113,6 +92,14 @@ public class CwatchServiceProperties {
 
 	public void setCdfWeblogicConnectionFactory(String cdfWeblogicConnectionFactory) {
 		this.cdfWeblogicConnectionFactory = cdfWeblogicConnectionFactory;
+	}
+
+	public InitialContextProperties getCdfInitialContext() {
+		return cdfInitialContext;
+	}
+
+	public void setCdfInitialContext(InitialContextProperties cdfInitialContext) {
+		this.cdfInitialContext = cdfInitialContext;
 	}
 
 		
