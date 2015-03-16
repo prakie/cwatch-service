@@ -16,13 +16,7 @@ public class CwatchServiceProperties {
 	
 	private String cdfInvalidQueueName = "cdf.invalid";
 	
-	private InitialContextProperties cdfInitialContext = new InitialContextProperties(
-			"weblogic.jndi.WLInitialContextFactory",
-			"t3://twls69.emsa.local:7011",
-			"weblogic",
-			"weblogic1"
-	);
-
+	private InitialContextProperties cdfInitialContext = new InitialContextProperties();
 	
 	private String cdfWeblogicConnectionFactory = "weblogic.jms.ConnectionFactory";
 	
