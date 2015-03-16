@@ -19,7 +19,7 @@ public class AisToCdfErrorRouteBuilder extends SpringRouteBuilder {
 		.setBody(exchangeProperty(AisToCdfRouteBuilder.AIS_MESSAGE))
 		.marshal("aisMessageGsonDataFormat")
 		.setHeader("ais2cdfInvalidReason", exceptionMessage())
-		.to("direct:ais2cdfInvalidLetter");
+		.to("direct:ais2cdfInvalidDeadLetter");
 		
 		from("direct:ais2cdfErrorOut")
 		.id("cdfErrorOut")
@@ -27,7 +27,7 @@ public class AisToCdfErrorRouteBuilder extends SpringRouteBuilder {
 		.marshal("aisMessageGsonDataFormat")
 		.to("log:ais2cdf.error?level=WARN&showAll=true&multiline=true&skipBodyLineSeparator=false")
 		.setHeader("ais2cdfErrorReason", exceptionMessage())
-		.to("direct:ais2cdfErrorLetter");
+		.to("direct:ais2cdfErrorDeadLetter");
 		
 	}
 	
