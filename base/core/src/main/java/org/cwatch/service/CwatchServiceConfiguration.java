@@ -6,7 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({CwatchRouteBuilder.class, AisToCdfRouteBuilder.class, AisToCdfRouteBuilder.class, CwatchServicePropertiesConfiguration.class})
+@Import({
+	CwatchRouteBuilder.class, 
+	AisToCdfRouteBuilder.class, 
+	CwatchServicePropertiesConfiguration.class
+})
 public class CwatchServiceConfiguration {
 
 }

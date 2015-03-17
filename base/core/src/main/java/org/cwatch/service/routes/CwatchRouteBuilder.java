@@ -35,9 +35,11 @@ public class CwatchRouteBuilder extends SpringRouteBuilder {
 		.to("activemq:topic:"+configuration.getCdfVoyageTopicName() + "?jmsMessageType=Text");
 		
 		from("direct:ais2cdfInvalidDeadLetter")
+		.id("ais2cdfInvalidDeadLetter")
 		.to("activemq:topic:"+configuration.getCdfInvalidTopicName() + "?jmsMessageType=Text");
 		
 		from("direct:ais2cdfErrorDeadLetter")
+		.id("ais2cdfErrorDeadLetter")
 		.to("activemq:topic:"+configuration.getCdfErrorTopicName() + "?jmsMessageType=Text");
 		
 	}

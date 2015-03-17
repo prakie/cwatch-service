@@ -1,9 +1,6 @@
 package org.cwatch.service.cdf;
 
-import java.util.Properties;
-
 import javax.jms.ConnectionFactory;
-import javax.naming.Context;
 import javax.naming.NamingException;
 
 import org.apache.camel.component.jms.JmsComponent;
@@ -13,7 +10,6 @@ import org.cwatch.service.CwatchServicePropertiesConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.jms.support.destination.DestinationResolver;
 import org.springframework.jms.support.destination.JndiDestinationResolver;
@@ -30,9 +26,11 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from("direct:cdfPositionForward")
+		.id("cdfJmsPositionForward")
 		.to("cdfJms:" + configuration.getCdfWeblogicPositionQueue());
 		
 		from("direct:cdfVoyageForward")
+		.id("cdfJmsVoyageForward")
 		.to("cdfJms:" + configuration.getCdfWeblogicVoyageQueue());
 	}
 
