@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
+import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.support.destination.DestinationResolver;
 import org.springframework.jms.support.destination.JndiDestinationResolver;
 import org.springframework.jndi.JndiTemplate;
@@ -54,7 +55,7 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	@Bean
 	JmsComponent cdfJms(ConnectionFactory cdfWeblogicConnectionFactory, DestinationResolver cdfWeblogicJmsDestinationResolver) {
 		JmsComponent jms = new JmsComponent();
-		jms.setConnectionFactory(cdfWeblogicConnectionFactory);
+		jms.setConnectionFactory(new CachingConnectionFactory(cdfWeblogicConnectionFactory));
 		jms.setDestinationResolver(cdfWeblogicJmsDestinationResolver);
 		return jms;
 	}
