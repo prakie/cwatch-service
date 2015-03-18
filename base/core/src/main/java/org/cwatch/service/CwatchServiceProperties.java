@@ -1,5 +1,6 @@
 package org.cwatch.service;
 
+import org.cwatch.env.ConnectionFactoryProperties;
 import org.cwatch.env.InitialContextProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -18,7 +19,7 @@ public class CwatchServiceProperties {
 	
 	private InitialContextProperties cdfInitialContext = new InitialContextProperties();
 	
-	private String cdfWeblogicConnectionFactory = "weblogic.jms.ConnectionFactory";
+	private ConnectionFactoryProperties cdfWeblogicConnectionFactory = new ConnectionFactoryProperties("weblogic.jms.ConnectionFactory", null);
 	
 	private String cdfWeblogicPositionQueue;
 	
@@ -80,20 +81,21 @@ public class CwatchServiceProperties {
 		this.vdmBatchTopicName = vdmBatchTopicName;
 	}
 
-	public String getCdfWeblogicConnectionFactory() {
-		return cdfWeblogicConnectionFactory;
-	}
-
-	public void setCdfWeblogicConnectionFactory(String cdfWeblogicConnectionFactory) {
-		this.cdfWeblogicConnectionFactory = cdfWeblogicConnectionFactory;
-	}
-
 	public InitialContextProperties getCdfInitialContext() {
 		return cdfInitialContext;
 	}
 
 	public void setCdfInitialContext(InitialContextProperties cdfInitialContext) {
 		this.cdfInitialContext = cdfInitialContext;
+	}
+
+	public ConnectionFactoryProperties getCdfWeblogicConnectionFactory() {
+		return cdfWeblogicConnectionFactory;
+	}
+
+	public void setCdfWeblogicConnectionFactory(
+			ConnectionFactoryProperties cdfWeblogicConnectionFactory) {
+		this.cdfWeblogicConnectionFactory = cdfWeblogicConnectionFactory;
 	}
 
 		

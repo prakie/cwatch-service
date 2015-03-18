@@ -42,7 +42,7 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	
 	@Bean
 	ConnectionFactory cdfWeblogicConnectionFactory(@Qualifier("cdfWeblogicJndiTemplate") JndiTemplate cdfWeblogicJndiTemplate, CwatchServiceProperties configuration) throws NamingException {
-		return cdfWeblogicJndiTemplate.lookup(configuration.getCdfWeblogicConnectionFactory(), ConnectionFactory.class);
+		return configuration.getCdfWeblogicConnectionFactory().lookup(cdfWeblogicJndiTemplate);
 	}
 
 	@Bean
@@ -55,7 +55,7 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	@Bean
 	JmsComponent cdfJms(ConnectionFactory cdfWeblogicConnectionFactory, DestinationResolver cdfWeblogicJmsDestinationResolver) {
 		JmsComponent jms = new JmsComponent();
-		jms.setConnectionFactory(new CachingConnectionFactory(cdfWeblogicConnectionFactory));
+		jms.setConnectionFactory(cdfWeblogicConnectionFactory);
 		jms.setDestinationResolver(cdfWeblogicJmsDestinationResolver);
 		return jms;
 	}
