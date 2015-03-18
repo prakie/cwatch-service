@@ -126,9 +126,13 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 			
 			private Schema positionSchema;
 
-			private synchronized Schema getPositionSchema() {
+			private Schema getPositionSchema() {
 				if (positionSchema == null) {
-					positionSchema = ImdateCdfTools.getPositionSchema();
+					synchronized (this) {
+						if (positionSchema == null) {
+							positionSchema = ImdateCdfTools.getPositionSchema();
+						}
+					}
 				}
 				return positionSchema;
 			}
