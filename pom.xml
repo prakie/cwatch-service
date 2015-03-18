@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cwatch</groupId>
 		<artifactId>cwatch-boot-base</artifactId>
-		<version>0.0.9-SNAPSHOT</version>
+		<version>0.0.9</version>
 		<relativePath>../cwatch-boot/base</relativePath>
 	</parent>
 
@@ -14,7 +14,8 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<cwatch-vdm.version>0.0.3-SNAPSHOT</cwatch-vdm.version>
+		<cwatch-vdm.version>0.0.3</cwatch-vdm.version>
+		<cwatch-split.version>0.0.3</cwatch-split.version>
 		<cwatch-vdmhttp-sender.version>0.0.1</cwatch-vdmhttp-sender.version>
 	</properties>
 
@@ -97,11 +98,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.cwatch</groupId>
-				<artifactId>cwatch-split-core</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>org.cwatch</groupId>
 				<artifactId>cwatch-service</artifactId>
 				<type>tar.gz</type>
 				<classifier>project</classifier>
@@ -117,6 +113,11 @@
 				<groupId>org.cwatch</groupId>
 				<artifactId>cwatch-vdm-test</artifactId>
 				<version>${cwatch-vdm.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cwatch</groupId>
+				<artifactId>cwatch-split-core</artifactId>
+				<version>${cwatch-split.version}</version>
 			</dependency>
 
 			<dependency>
