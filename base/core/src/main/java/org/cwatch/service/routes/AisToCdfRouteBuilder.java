@@ -150,11 +150,25 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 	@Bean
 	private JaxbDataFormat voyageDataFormat() {
 		return new JaxbDataFormat(ImdateCdfTools.createContext()) {
+			
+			private Schema voyageSchema;
+
+			private Schema getVoyageSchema() {
+				if (voyageSchema == null) {
+					synchronized (this) {
+						if (voyageSchema == null) {
+							voyageSchema = ImdateCdfTools.getVoyageSchema();
+						}
+					}
+				}
+				return voyageSchema;
+			}
+			
 			@Override
 			protected Marshaller createMarshaller() throws JAXBException,
 					SAXException, FileNotFoundException, MalformedURLException {
 				Marshaller m = super.createMarshaller();
-				m.setSchema(ImdateCdfTools.getVoyageSchema());
+				m.setSchema(getVoyageSchema());
 				return m;
 			}
 		};
