@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.MarshalException;
 import javax.xml.bind.Marshaller;
+import javax.xml.validation.Schema;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.component.gson.GsonDataFormat;
@@ -52,7 +53,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 			.setProperty(AIS_MESSAGE_CONTAINER_JSON, body())
 			.unmarshal("aisMessageContainerGsonDataFormat")
 			.setProperty("aisMessageId").simple("${body.messageId}")
-			.split(simple("${body.aisMessages}"))
+			.split(simple("${body.aisMessages}")).parallelProcessing()
 			.doTry()
 				.setProperty(AIS_MESSAGE, body())
 				.setProperty("aisMessageType", new ExpressionAdapter() {
@@ -122,11 +123,21 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 	@Bean
 	private JaxbDataFormat positionDataFormat() {
 		return new JaxbDataFormat(ImdateCdfTools.createContext()) {
+			
+			private Schema positionSchema;
+
+			private synchronized Schema getPositionSchema() {
+				if (positionSchema == null) {
+					positionSchema = ImdateCdfTools.getPositionSchema();
+				}
+				return positionSchema;
+			}
+			
 			@Override
 			protected Marshaller createMarshaller() throws JAXBException,
 					SAXException, FileNotFoundException, MalformedURLException {
 				Marshaller m = super.createMarshaller();
-				m.setSchema(ImdateCdfTools.getPositionSchema());
+				m.setSchema(getPositionSchema());
 				return m;
 			}
 		};
