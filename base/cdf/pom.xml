@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.cwatch</groupId>
 		<artifactId>cwatch-service-base</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>cwatch-service-cdf</artifactId>
 
