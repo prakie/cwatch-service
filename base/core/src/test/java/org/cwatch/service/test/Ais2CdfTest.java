@@ -94,6 +94,24 @@ public class Ais2CdfTest {
 		ais2cdfErrorOut.assertIsSatisfied();
 	}
 	
+	@Test
+	public void testCase01() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(0);
+		ais2cdf.sendBody(getResource("/vdmHttp-case01.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+
+	@Test
+	/**
+	 * source value in json is invalid
+	 * @throws Exception
+	 */
+	public void testCase02() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(1);
+		ais2cdf.sendBody(getResource("/vdmHttp-case02.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+	
 	@Configuration
 	@Import(AisToCdfRouteBuilder.class)
 	public static class ContextConfig  {

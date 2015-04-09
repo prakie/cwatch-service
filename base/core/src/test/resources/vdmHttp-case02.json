@@ -1,0 +1,74 @@
+{
+    "aisMessages" : [
+        {
+            "reportedVessel" : {
+                "mmsi" : 760000013,
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "2",
+                "rateOfTurn" : 0.0,
+                "heading" : 0,
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1427457483399,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "T-AIS",
+                "longitude" : 3.6432476,
+                "latitude" : 50.00999
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1427466115",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "IT",
+                        "dataOriginator" : {
+                            "rcc" : "IT",
+                            "countryCode" : "IT"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        }
+    ],
+    "messageId" : "NPRTESTDEAREA2_1:2005660a-8c65-4fdc-9be5-bec31e70b404",
+    "proxyName" : "NPRTESTDEAREA2_1",
+    "monitoringMessage" : {
+        "channel" : 1,
+        "enabled" : false,
+        "stiresMonitoringMessage" : {
+            "connected" : true,
+            "messagesCoreReceived" : 0,
+            "messagesCoreReceived24h" : 0,
+            "messagesCoreSent" : 0,
+            "messagesCoreSent24h" : 0
+        },
+        "proxyMonitoringMessage" : {
+            "active" : false,
+            "messagesProxySent" : 141,
+            "messagesProxySent24h" : 1560,
+            "messagesProxyReceived" : 0,
+            "messagesProxyReceived24h" : 0,
+            "providerConnected" : true,
+            "providerActive" : true,
+            "storedMessages" : 0,
+            "version" : "SSN-SI v1.0.2.0"
+        }
+    },
+    "receivedAt" : 0
+}
