@@ -28,11 +28,11 @@ public class CdfForwardRouteBuilder extends SpringRouteBuilder {
 	public void configure() throws Exception {
 		from("direct:cdfPositionForward")
 		.id("cdfJmsPositionForward")
-		.to("cdfJms:" + configuration.getCdfWeblogicPositionQueue());
+		.to("cdfJms:" + configuration.getCdfWeblogicPositionQueue()+"?jmsMessageType=Text");
 		
 		from("direct:cdfVoyageForward")
 		.id("cdfJmsVoyageForward")
-		.to("cdfJms:" + configuration.getCdfWeblogicVoyageQueue());
+		.to("cdfJms:" + configuration.getCdfWeblogicVoyageQueue()+"?jmsMessageType=Text");
 	}
 
 	@Bean

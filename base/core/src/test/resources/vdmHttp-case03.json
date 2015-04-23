@@ -1,0 +1,310 @@
+{
+    "aisMessages" : [
+        {
+            "reportedVessel" : {
+                "mmsi" : 760000010,
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "18",
+                "classBUnitFlag" : true,
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1429709752013,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "S",
+                "longitude" : -19.974737,
+                "latitude" : 51.324154
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "ES",
+                        "dataOriginator" : {
+                            "rcc" : "ES",
+                            "countryCode" : "ES"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        },
+        {
+            "reportedVessel" : {
+                "shipType" : 0,
+                "length" : 30,
+                "width" : 8,
+                "mmsi" : 760000014,
+                "name" : "IMDATE-TEST-SHIP-05",
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "19",
+                "dataTerminalReady" : false,
+                "heading" : 0,
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1429709752013,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "A",
+                "longitude" : -19.974737,
+                "latitude" : 51.324154
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "IT",
+                        "dataOriginator" : {
+                            "rcc" : "IT",
+                            "countryCode" : "IT"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        },
+        {
+            "reportedVessel" : {
+                "mmsi" : 760000010,
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "2",
+                "rateOfTurn" : 0.0,
+                "heading" : 0,
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1429709752013,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "S",
+                "longitude" : -19.974737,
+                "latitude" : 51.324154
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "FR",
+                        "dataOriginator" : {
+                            "rcc" : "FR",
+                            "countryCode" : "FR"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        },
+        {
+            "reportedVessel" : {
+                "mmsi" : 760000014,
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "1",
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1429709752013,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "S",
+                "longitude" : -19.974737,
+                "latitude" : 51.324154
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "PT",
+                        "dataOriginator" : {
+                            "rcc" : "PT",
+                            "countryCode" : "PT"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        },
+        {
+            "reportedVessel" : {
+                "shipType" : 0,
+                "length" : 30,
+                "width" : 8,
+                "draught" : 10,
+                "imo" : 2899993,
+                "mmsi" : 760000010,
+                "name" : "IMDATE-TEST-SHIP-01",
+                "callsign" : "EIS4",
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "5",
+                "version" : 0,
+                "destination" : "WILHELMSHAVEN",
+                "eta" : "2015-04-24 16:59:52",
+                "dataTerminalReady" : false,
+                "dimRefPosition" : {
+                    "toBow" : 18,
+                    "toStern" : 12,
+                    "toStarboard" : 5,
+                    "toPort" : 3
+                },
+                "navigationalStatus" : 0,
+                "epfdType" : 1,
+                "timeL" : 1429709752013,
+                "source" : "A"
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "PT",
+                        "dataOriginator" : {
+                            "rcc" : "PT",
+                            "countryCode" : "PT"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        },
+        {
+            "reportedVessel" : {
+                "mmsi" : 760000014,
+                "flagRegistryCode" : "IT"
+            },
+            "positionReport" : {
+                "aisMessageType" : "3",
+                "rateOfTurn" : 0.0,
+                "heading" : 0,
+                "navigationalStatus" : 0,
+                "epfdStatus" : 6,
+                "raimFlag" : true,
+                "timeL" : 1429709752013,
+                "speedOverGround" : 0.0,
+                "courseOverGround" : 189.9,
+                "source" : "S",
+                "longitude" : -19.974737,
+                "latitude" : 51.324154
+            },
+            "vdmSentence" : "\\c:1422014500*5C\\!ABVDM,1,1,,A,B3uCbQP000\u003dDs:8@5fH03wk5kP06,0*7D\n",
+            "originalNmeas" : [
+                "!BSVDM,1,1,,B,13@nod@P00PhPVNQ1V`oJww@2D1\u003d,0*32"
+            ],
+            "commentBlock" : {
+                "originalMessage" : "\\c:1422014500\\",
+                "time" : "1429718383",
+                "vdmInfoCb" : {
+                    "type" : "ssn.spm.domain.vdm.commentblock.TCbInfoCb",
+                    "properties" : {
+                        "dataOriginatorStr" : "FR",
+                        "dataOriginator" : {
+                            "rcc" : "FR",
+                            "countryCode" : "FR"
+                        }
+                    }
+                }
+            },
+            "cbRecipients" : [],
+            "recipients" : [],
+            "destinations" : [],
+            "senderProviderAreas" : [],
+            "persistence" : false,
+            "voyageCalculation" : false,
+            "proxied" : false
+        }
+    ],
+    "messageId" : "NPRTESTDEAREA2_1:090c6385-545d-429b-93ef-f97ce8405d12",
+    "proxyName" : "NPRTESTDEAREA2_1",
+    "monitoringMessage" : {
+        "channel" : 1,
+        "enabled" : false,
+        "stiresMonitoringMessage" : {
+            "connected" : true,
+            "messagesCoreReceived" : 0,
+            "messagesCoreReceived24h" : 0,
+            "messagesCoreSent" : 0,
+            "messagesCoreSent24h" : 0
+        },
+        "proxyMonitoringMessage" : {
+            "active" : false,
+            "messagesProxySent" : 141,
+            "messagesProxySent24h" : 1560,
+            "messagesProxyReceived" : 0,
+            "messagesProxyReceived24h" : 0,
+            "providerConnected" : true,
+            "providerActive" : true,
+            "storedMessages" : 0,
+            "version" : "SSN-SI v1.0.2.0"
+        }
+    },
+    "receivedAt" : 0
+}

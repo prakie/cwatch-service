@@ -68,6 +68,7 @@ public class Ais2CdfTest {
 	
 	@Test
 	public void testInvalidContainer() throws Exception {
+		ais2cdfErrorOut.reset();
 		ais2cdfErrorOut.expectedMessageCount(1);
 		ais2cdf.sendBody(getResource("/vdmHttp-invalidContainer.json"));
 		ais2cdfErrorOut.assertIsSatisfied();
@@ -112,6 +113,17 @@ public class Ais2CdfTest {
 		ais2cdfErrorOut.assertIsSatisfied();
 	}
 	
+	@Test
+	/**
+	 * source value in json is invalid
+	 * @throws Exception
+	 */
+	public void testCase03() throws Exception {
+		ais2cdfErrorOut.expectedMessageCount(1);
+		ais2cdf.sendBody(getResource("/vdmHttp-case03.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+
 	@Configuration
 	@Import(AisToCdfRouteBuilder.class)
 	public static class ContextConfig  {

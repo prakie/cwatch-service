@@ -100,6 +100,7 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 		.doCatch(Exception.class)
 			.to("direct:ais2cdfErrorOut")
 		.end()
+		.setBody(constant("RECEIVED"))
 		;
 		
 		from("direct:ais2cdfPosition")
