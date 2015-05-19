@@ -1,5 +1,7 @@
 package org.cwatch.service;
 
+import java.util.concurrent.TimeUnit;
+
 import org.cwatch.env.ConnectionFactoryProperties;
 import org.cwatch.env.InitialContextProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -24,6 +26,10 @@ public class CwatchServiceProperties {
 	private String cdfWeblogicPositionQueue;
 	
 	private String cdfWeblogicVoyageQueue;
+	
+	private long timestampFutureThreshold = 1;
+	
+	private TimeUnit timestampFutureThresholdUnit = TimeUnit.HOURS;
 	
 	public String getCdfPositionTopicName() {
 		return cdfPositionTopicName;
@@ -96,6 +102,23 @@ public class CwatchServiceProperties {
 	public void setCdfWeblogicConnectionFactory(
 			ConnectionFactoryProperties cdfWeblogicConnectionFactory) {
 		this.cdfWeblogicConnectionFactory = cdfWeblogicConnectionFactory;
+	}
+
+	public long getTimestampFutureThreshold() {
+		return timestampFutureThreshold;
+	}
+
+	public void setTimestampFutureThreshold(long timestampFutureThreshold) {
+		this.timestampFutureThreshold = timestampFutureThreshold;
+	}
+
+	public TimeUnit getTimestampFutureThresholdUnit() {
+		return timestampFutureThresholdUnit;
+	}
+
+	public void setTimestampFutureThresholdUnit(
+			TimeUnit timestampFutureThresholdUnit) {
+		this.timestampFutureThresholdUnit = timestampFutureThresholdUnit;
 	}
 
 		

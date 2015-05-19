@@ -6,6 +6,7 @@ import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.MarshalException;
@@ -18,6 +19,7 @@ import org.apache.camel.converter.jaxb.JaxbDataFormat;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.apache.camel.support.ExpressionAdapter;
 import org.cwatch.imdate.cdf.v_1_0.ImdateCdfTools;
+import org.cwatch.service.CwatchServiceProperties;
 import org.cwatch.vdm.ais.AisMessage;
 import org.cwatch.vdm.ais.AisMessageContainer;
 import org.cwatch.vdm.ais.AisPositionReport;
@@ -25,6 +27,7 @@ import org.cwatch.vdm.ais.gson.CbInfoCbGsonAdapter;
 import org.cwatch.vdm.cdf.AisMessageToCdfConversionException;
 import org.cwatch.vdm.cdf.AisMessageToCdfConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
@@ -44,6 +47,7 @@ import com.google.gson.stream.JsonWriter;
 
 @Component
 @Import(AisMessageToCdfConverter.class)
+@EnableConfigurationProperties(CwatchServiceProperties.class)
 public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 
 	public static final String AIS_MESSAGE_CONTAINER_JSON = "AIS_MESSAGE_CONTAINER_JSON";
@@ -52,6 +56,9 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 
 	@Autowired
 	AisMessageToCdfConverter ais2cdf;
+	
+	@Autowired
+	CwatchServiceProperties properties;
 	
 	@Override
 	public void configure() throws Exception {
@@ -67,12 +74,18 @@ public class AisToCdfRouteBuilder extends SpringRouteBuilder {
 			.doTry()
 				.setProperty(AIS_MESSAGE, body())
 				.setProperty("aisMessageType", new ExpressionAdapter() {
+					
+					long futureMillisDiff = TimeUnit.MILLISECONDS.convert(properties.getTimestampFutureThreshold(), properties.getTimestampFutureThresholdUnit());
+					
 					@Override
 					public Object evaluate(Exchange exchange) {
 						AisMessage msg = exchange.getIn().getBody(AisMessage.class);
 						AisPositionReport positionReport = msg.getPositionReport();
 						if (positionReport==null) {
 							throw new AisMessageToCdfConversionException("positionReport missing");
+						}
+						if (positionReport.getTimeL() > System.currentTimeMillis() + futureMillisDiff) {
+							throw new AisMessageToCdfConversionException(String.format("message timestamp in future beyond threshold (%d msec)", futureMillisDiff));
 						}
 						try {
 							return Integer.valueOf(positionReport.getAisMessageType());

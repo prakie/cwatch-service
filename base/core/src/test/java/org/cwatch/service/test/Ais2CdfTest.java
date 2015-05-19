@@ -1,6 +1,7 @@
 package org.cwatch.service.test;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.EndpointInject;
@@ -15,6 +16,10 @@ import org.apache.camel.impl.DefaultCamelBeanPostProcessor;
 import org.apache.camel.model.ContextScanDefinition;
 import org.apache.camel.spring.CamelContextFactoryBean;
 import org.cwatch.service.routes.AisToCdfRouteBuilder;
+import org.cwatch.vdm.ais.AisMessage;
+import org.cwatch.vdm.ais.AisMessageContainer;
+import org.cwatch.vdm.ais.AisPositionReport;
+import org.cwatch.vdm.ais.enums.SourceType;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,6 +30,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.google.gson.Gson;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
@@ -38,6 +45,12 @@ public class Ais2CdfTest {
 	
 	@EndpointInject(uri = "mock:ais2cdfErrorOut")
 	protected MockEndpoint ais2cdfErrorOut;
+	
+	@EndpointInject(uri = "mock:ais2cdfInvalidOut")
+	protected MockEndpoint ais2cdfInvalidOut;
+	
+	@EndpointInject(uri = "mock:ais2cdfPositionOut")
+	protected MockEndpoint ais2cdfPositionOut;
 	
 	@Test
 	public void testZippedValidSet() throws Exception {
@@ -94,7 +107,57 @@ public class Ais2CdfTest {
 		ais2cdf.sendBody(getResource("/vdmHttp-onlyMessages.json"));
 		ais2cdfErrorOut.assertIsSatisfied();
 	}
-	
+
+	@Autowired
+	Gson aisGson;
+
+	@Test
+	public void testFuture() throws Exception {
+		ais2cdfErrorOut.reset();
+		ais2cdfInvalidOut.reset();
+		ais2cdfPositionOut.reset();
+		
+		ais2cdfErrorOut.expectedMessageCount(0);
+		ais2cdfInvalidOut.expectedMessageCount(1);
+		ais2cdfPositionOut.expectedMessageCount(1);
+		
+		{
+			AisMessage m = new AisMessage();
+			AisPositionReport pr = new AisPositionReport();
+			pr.setSource(SourceType.A);
+			pr.setLatitude(80.0);
+			pr.setLongitude(170.0);
+			pr.setAisMessageType("1");
+			pr.setTimeL(System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(50, TimeUnit.MINUTES));
+			m.setPositionReport(pr );
+			
+			
+			AisMessageContainer c = new AisMessageContainer();
+			c.getAisMessages().add(m);
+			ais2cdf.sendBody(aisGson.toJson(c));
+		}
+		
+		{
+			AisMessage m = new AisMessage();
+			AisPositionReport pr = new AisPositionReport();
+			pr.setSource(SourceType.A);
+			pr.setLatitude(80.0);
+			pr.setLongitude(170.0);
+			pr.setAisMessageType("1");
+			pr.setTimeL(System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(70, TimeUnit.MINUTES));
+			m.setPositionReport(pr );
+			
+			
+			AisMessageContainer c = new AisMessageContainer();
+			c.getAisMessages().add(m);
+			ais2cdf.sendBody(aisGson.toJson(c));
+		}
+		
+		ais2cdfErrorOut.assertIsSatisfied();
+		ais2cdfInvalidOut.assertIsSatisfied();
+		ais2cdfPositionOut.assertIsSatisfied();
+	}
+
 	@Test
 	public void testCase01() throws Exception {
 		ais2cdfErrorOut.expectedMessageCount(0);
@@ -157,10 +220,12 @@ public class Ais2CdfTest {
 			return new RouteBuilder() {
 				public void configure() {
 					from("direct:ais2cdfPositionOut")
-					.to("log:pos?showBody=false");
+					.to("log:pos?showBody=false")
+					.to("mock:ais2cdfPositionOut");
 					
 					from("direct:ais2cdfVoyageOut")
 					.to("log:voyage?showBody=false")
+					.to("mock:ais2cdfVoyageOut")
 					;
 					
 					from("direct:ais2cdfErrorOut")
@@ -170,6 +235,7 @@ public class Ais2CdfTest {
 					
 					from("direct:ais2cdfInvalidOut")
 					.to("log:invalid?showAll=true")
+					.to("mock:ais2cdfInvalidOut")
 					;
 					
 				}
