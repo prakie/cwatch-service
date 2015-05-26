@@ -108,6 +108,15 @@ public class Ais2CdfTest {
 		ais2cdfErrorOut.assertIsSatisfied();
 	}
 
+	@Test
+	public void testMmsiWithLetter() throws Exception {
+		ais2cdfErrorOut.reset();
+		ais2cdfErrorOut.expectedMessageCount(1);
+		ais2cdf.sendBody(getResource("/vdmHttp-mmsiWithLetter.json"));
+		ais2cdfErrorOut.assertIsSatisfied();
+	}
+	
+	
 	@Autowired
 	Gson aisGson;
 
